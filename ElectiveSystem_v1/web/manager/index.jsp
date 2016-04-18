@@ -1,4 +1,7 @@
-<%@ page import="com.wolfogre.domain.Manager" %><%--
+<%@ page import="com.wolfogre.domain.Manager" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+
+<%--
   Created by IntelliJ IDEA.
   User: Jason Song(wolfogre.com)
   Date: 2016/4/13
@@ -38,5 +41,15 @@
 	<li role="presentation"><a href="selection.jsp">选课管理</a></li>
 	<li role="presentation"><a href="logout">退出系统</a></li>
 </ul>
+<div class="jumbotron" style="height: 100%">
+	<div class="panel panel-info center-block" style="width: 50%">
+		<div class="panel-body">
+			<h2>姓名：<%=master.getM_name()%></h2>
+			<h2>工号：<%=master.getM_id()%></h2>
+			<h2>身份：管理员</h2>
+			<h2>当前时间：<%=new SimpleDateFormat("yyyy年M月dd日 HH时mm分").format(new java.util.Date())%></h2>
+		</div>
+	</div>
+</div>
 </body>
 </html>
