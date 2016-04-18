@@ -28,8 +28,8 @@
 	</div>
 </div>
 <ul class="nav nav-tabs">
-	<li role="presentation" class="active"><a href="index.jsp">基本信息</a></li>
-	<li role="presentation"><a href="timetable.jsp">课表查询</a></li>
+	<li role="presentation"><a href="index.jsp">基本信息</a></li>
+	<li role="presentation" class="active"><a href="timetable.jsp">课表查询</a></li>
 	<li role="presentation"><a href="list.jsp">学生名单查询</a></li>
 	<li role="presentation"><a href="score.jsp">成绩登记</a></li>
 	<li role="presentation"><a href="logout">退出系统</a></li>

@@ -28,12 +28,12 @@
 	</div>
 </div>
 <ul class="nav nav-tabs">
-	<li role="presentation" class="active"><a href="index.jsp">基本信息</a></li>
+	<li role="presentation"><a href="index.jsp">基本信息</a></li>
 	<li role="presentation"><a href="term.jsp">学期管理</a></li>
 	<li role="presentation"><a href="student.jsp">学生管理</a></li>
 	<li role="presentation"><a href="teacher.jsp">教师管理</a></li>
 	<li role="presentation"><a href="manager.jsp">管理员管理</a></li>
-	<li role="presentation"><a href="course.jsp">课程管理</a></li>
+	<li role="presentation" class="active"><a href="course.jsp">课程管理</a></li>
 	<li role="presentation"><a href="class.jsp">开课管理</a></li>
 	<li role="presentation"><a href="selection.jsp">选课管理</a></li>
 	<li role="presentation"><a href="logout">退出系统</a></li>
