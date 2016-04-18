@@ -5,4 +5,11 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+    <constant name="conststructs.devMode" value="true"/>
+    <package name="com.wolfogre" extends="struts-default">
+        <action name="check-login" class="com.wolfogre.action.CheckLoginAction">
+            <result>/WEB-INF/content/welcome.jsp</result>
+            <result name="error">/index.jsp</result>
+        </action>
+    </package>
 </struts>

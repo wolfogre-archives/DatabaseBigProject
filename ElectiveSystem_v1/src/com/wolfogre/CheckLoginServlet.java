@@ -12,7 +12,7 @@ import java.sql.SQLException;
 /**
  * Created by Jason Song(wolfogre.com) on 2016/4/13.
  */
-@WebServlet(name = "CheckLogin", urlPatterns = {"/CheckLogin"})
+@WebServlet(name = "CheckLogin", urlPatterns = {"/CheckLoginnn"})
 public class CheckLoginServlet extends HttpServlet {
 
 	private DbDao dbDao;

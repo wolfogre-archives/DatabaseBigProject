@@ -18,11 +18,17 @@
   <div class="page-header">
     <h1 class="text-center">欢迎来到课程管理系统</h1>
   </div>
+<%
+  if(request.getAttribute("error") != null){
+%>
   <div class="alert alert-danger center-block" role="alert" style="width: 500px;" align="center">
-    <strong>登录失败！</strong> 学号/工号或密码错误！
+    <strong>登录失败！</strong><%=request.getAttribute("error")%>
   </div>
+<%
+  }
+%>
     <div class="panel panel-default center-block" style="width:400px;padding:30px">
-      <form action="CheckLogin">
+      <form action="check-login">
         <div class="form-group">
           <label for="id">学号/工号</label>
           <input type="text" class="form-control" name="id" id="id" placeholder="请输入学号/工号" required>
@@ -36,13 +42,13 @@
         </div>
         <div class="checkbox text-center">
           <label>
-            <input type="radio" id="login-type1" name="login-type" value="student" checked>学生
+            <input type="radio" id="login-type1" name="loginType" value="student" checked>学生
           </label>
           <label>
-            <input type="radio" id="login-type2" name="login-type" value="teacher">教师
+            <input type="radio" id="login-type2" name="loginType" value="teacher">教师
           </label>
           <label>
-            <input type="radio" id="login-type3" name="login-type" value="student">管理员
+            <input type="radio" id="login-type3" name="loginType" value="manager">管理员
           </label>
         </div>
         <br/>
