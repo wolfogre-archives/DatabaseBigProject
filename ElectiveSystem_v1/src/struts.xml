@@ -8,8 +8,9 @@
     <constant name="conststructs.devMode" value="true"/>
     <package name="com.wolfogre" extends="struts-default">
         <action name="check-login" class="com.wolfogre.action.CheckLoginAction">
-            <result>/WEB-INF/content/welcome.jsp</result>
-            <result name="error">/index.jsp</result>
+        </action>
+        <action name="logout" class="com.wolfogre.action.LogoutAction">
+            <result>/index.jsp</result>
         </action>
     </package>
 </struts>
