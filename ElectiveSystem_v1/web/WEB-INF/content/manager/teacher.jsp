@@ -18,7 +18,7 @@
 <%
 	Manager master = (Manager)session.getAttribute("master");
 	if(master == null){
-		response.sendRedirect("/index.jsp");
+		response.sendRedirect("/index.action");
 		return;
 	}
 %>
@@ -28,14 +28,14 @@
 	</div>
 </div>
 <ul class="nav nav-tabs">
-	<li role="presentation"><a href="index.jsp">基本信息</a></li>
-	<li role="presentation"><a href="term.jsp">学期管理</a></li>
-	<li role="presentation"><a href="student.jsp">学生管理</a></li>
-	<li role="presentation"><a href="teacher.jsp">教师管理</a></li>
-	<li role="presentation"><a href="manager.jsp">管理员管理</a></li>
-	<li role="presentation"><a href="course.jsp">课程管理</a></li>
-	<li role="presentation" class="active"><a href="class.jsp">开课管理</a></li>
-	<li role="presentation"><a href="selection.jsp">选课管理</a></li>
+	<li role="presentation"><a href="index.action">基本信息</a></li>
+	<li role="presentation"><a href="term.action">学期管理</a></li>
+	<li role="presentation"><a href="student.action">学生管理</a></li>
+	<li role="presentation" class="active"><a href="teacher.action">教师管理</a></li>
+	<li role="presentation"><a href="manager.action">管理员管理</a></li>
+	<li role="presentation"><a href="course.action">课程管理</a></li>
+	<li role="presentation"><a href="class.action">开课管理</a></li>
+	<li role="presentation"><a href="selection.action">选课管理</a></li>
 	<li role="presentation"><a href="logout">退出系统</a></li>
 </ul>
 <div class="jumbotron" style="height: 100%">

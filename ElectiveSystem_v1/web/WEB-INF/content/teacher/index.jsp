@@ -18,7 +18,7 @@
 <%
 	Teacher master = (Teacher)session.getAttribute("master");
 	if(master == null){
-		response.sendRedirect("/index.jsp");
+		response.sendRedirect("/index.action");
 		return;
 	}
 %>
@@ -28,10 +28,10 @@
 	</div>
 </div>
 <ul class="nav nav-tabs">
-	<li role="presentation" ><a href="index.jsp">基本信息</a></li>
-	<li role="presentation"><a href="timetable.jsp">课表查询</a></li>
-	<li role="presentation" class="active"><a href="list.jsp">学生名单查询</a></li>
-	<li role="presentation"><a href="score.jsp">成绩登记</a></li>
+	<li role="presentation" class="active"><a href="index.action">基本信息</a></li>
+	<li role="presentation"><a href="timetable.action">课表查询</a></li>
+	<li role="presentation"><a href="list.action">学生名单查询</a></li>
+	<li role="presentation"><a href="score.action">成绩登记</a></li>
 	<li role="presentation"><a href="logout">退出系统</a></li>
 </ul>
 </body>
