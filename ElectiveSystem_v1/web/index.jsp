@@ -28,7 +28,7 @@
   }
 %>
     <div class="panel panel-default center-block" style="width:400px;padding:30px">
-      <form action="check-login">
+      <form action="check-login.action">
         <div class="form-group">
           <label for="id">学号/工号</label>
           <input type="text" class="form-control" name="id" id="id" placeholder="请输入学号/工号" required>

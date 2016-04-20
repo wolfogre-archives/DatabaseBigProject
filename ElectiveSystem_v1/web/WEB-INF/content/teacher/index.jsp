@@ -1,4 +1,5 @@
-<%@ page import="com.wolfogre.domain.Teacher" %><%--
+<%@ page import="com.wolfogre.domain.Teacher" %>
+<%@ page import="java.text.SimpleDateFormat" %><%--
   Created by IntelliJ IDEA.
   User: Jason Song(wolfogre.com)
   Date: 2016/4/13
@@ -28,11 +29,21 @@
 	</div>
 </div>
 <ul class="nav nav-tabs">
-	<li role="presentation" class="active"><a href="index.action">基本信息</a></li>
-	<li role="presentation"><a href="timetable.action">课表查询</a></li>
-	<li role="presentation"><a href="list.action">学生名单查询</a></li>
-	<li role="presentation"><a href="score.action">成绩登记</a></li>
-	<li role="presentation"><a href="logout">退出系统</a></li>
+	<li role="presentation" class="active"><a href="teacher-index.action">基本信息</a></li>
+	<li role="presentation"><a href="teacher-timetable.action">课表查询</a></li>
+	<li role="presentation"><a href="teacher-list.action">学生名单查询</a></li>
+	<li role="presentation"><a href="teacher-score.action">成绩登记</a></li>
+	<li role="presentation"><a href="logout.action">退出系统</a></li>
 </ul>
+<div class="jumbotron" style="height: 100%">
+	<div class="panel panel-info center-block" style="width: 50%">
+		<div class="panel-body">
+			<h2>姓名：<%=master.getT_name()%></h2>
+			<h2>工号：<%=master.getT_id()%></h2>
+			<h2>身份：教师</h2>
+			<h2>当前时间：<%=new SimpleDateFormat("yyyy年M月dd日 HH时mm分").format(new java.util.Date())%></h2>
+		</div>
+	</div>
+</div>
 </body>
 </html>
