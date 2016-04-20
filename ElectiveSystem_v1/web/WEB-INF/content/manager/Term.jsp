@@ -11,10 +11,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+	<!-- Bootstrap CSS -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/bootstrap.css">
+	<!-- DataTables CSS -->
+	<link rel="stylesheet" type="text/css" href="/DataTables-1.10.11/css/jquery.dataTables.css">
+	<script type="text/javascript" charset="utf8" src="/DataTables-1.10.11/js/jquery.js"></script>
+	<script type="text/javascript" charset="utf8" src="/DataTables-1.10.11/js/jquery.dataTables.js"></script>
+
 	<title>管理员页面</title>
 </head>
 <body>
@@ -42,7 +48,7 @@
 	<li role="presentation"><a href="logout.action">退出系统</a></li>
 </ul>
 <div class="jumbotron" style="height: 100%">
-	
+
 </div>
 </body>
 </html>

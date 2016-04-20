@@ -29,10 +29,10 @@
 	</div>
 </div>
 <ul class="nav nav-tabs">
-	<li role="presentation" class="active"><a href="student-index.action">基本信息</a></li>
-	<li role="presentation"><a href="student-timetable.action">课表查询</a></li>
-	<li role="presentation"><a href="student-score.action">成绩查询</a></li>
-	<li role="presentation"><a href="student-course.action">选课退课</a></li>
+	<li role="presentation" class="active"><a href="studentIndex.action">基本信息</a></li>
+	<li role="presentation"><a href="studentTimetable.action">课表查询</a></li>
+	<li role="presentation"><a href="studentScore.action">成绩查询</a></li>
+	<li role="presentation"><a href="studentCourse.action">选课退课</a></li>
 	<li role="presentation"><a href="logout.action">退出系统</a></li>
 </ul>
 <div class="jumbotron" style="height: 100%">

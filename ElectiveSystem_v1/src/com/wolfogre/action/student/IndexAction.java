@@ -1,6 +1,8 @@
 package com.wolfogre.action.student;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import com.wolfogre.Information;
 
 /**
  * Created by Jason Song(wolfogre.com) on 2016/4/20.
@@ -8,6 +10,8 @@ import com.opensymphony.xwork2.ActionSupport;
 public class IndexAction extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
-		return super.execute();
+		ActionContext actionContext = ActionContext.getContext();
+		actionContext.put("term", Information.getNowTerm());
+		return SUCCESS;
 	}
 }
