@@ -2,6 +2,8 @@ package com.wolfogre.action;
 
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
 
@@ -12,25 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Created by Jason Song(wolfogre.com) on 2016/4/18.
  */
-public class LogoutAction implements Action, ServletRequestAware, ServletResponseAware{
-
-	private HttpServletRequest httpServletRequest;
-	private HttpServletResponse httpServletResponse;
-
+public class LogoutAction extends ActionSupport{
 	@Override
 	public String execute() throws Exception {
-		httpServletRequest.getSession().invalidate();
-		httpServletResponse.sendRedirect("/index.jsp");
-		return null;
-	}
-
-	@Override
-	public void setServletRequest(HttpServletRequest httpServletRequest) {
-		this.httpServletRequest = httpServletRequest;
-	}
-
-	@Override
-	public void setServletResponse(HttpServletResponse httpServletResponse) {
-		this.httpServletResponse = httpServletResponse;
+		ServletActionContext.getRequest().getSession().invalidate();
+		return SUCCESS;
 	}
 }

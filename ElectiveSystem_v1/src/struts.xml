@@ -9,8 +9,12 @@
     <package name="com.wolfogre" extends="struts-default">
         <action name="check-login" class="com.wolfogre.action.CheckLoginAction">
             <result name="error">/index.jsp</result>
+            <result name="STUDENT" type="redirect">/student/index.jsp</result>
+            <result name="TEACHER" type="redirect">/teacher/index.jsp</result>
+            <result name="MANAGER" type="redirect">/manager/index.jsp</result>
         </action>
         <action name="logout" class="com.wolfogre.action.LogoutAction">
+            <result type="redirect">/index.jsp</result>
         </action>
     </package>
 </struts>

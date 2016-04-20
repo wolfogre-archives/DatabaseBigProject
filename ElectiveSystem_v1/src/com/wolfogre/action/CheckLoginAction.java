@@ -2,6 +2,7 @@ package com.wolfogre.action;
 
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
 import com.wolfogre.domain.Manager;
 import com.wolfogre.domain.Student;
 import com.wolfogre.domain.Teacher;
@@ -17,12 +18,11 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Created by Jason Song(wolfogre.com) on 2016/4/18.
  */
-public class CheckLoginAction implements Action, ServletResponseAware {
+public class CheckLoginAction extends ActionSupport {
 
 	private String id;
 	private String password;
 	private String loginType;
-	private HttpServletResponse httpServletResponse;
 
 	public String getId() {
 		return id;
@@ -82,8 +82,7 @@ public class CheckLoginAction implements Action, ServletResponseAware {
 				return ERROR;
 			} else{
 				actionContext.getSession().put("master", student);
-				httpServletResponse.sendRedirect("student/index.jsp");
-				return null;
+				return "STUDENT";
 			}
 		}
 
@@ -94,8 +93,7 @@ public class CheckLoginAction implements Action, ServletResponseAware {
 				return ERROR;
 			} else{
 				actionContext.getSession().put("master", teacher);
-				httpServletResponse.sendRedirect("teacher/index.jsp");
-				return null;
+				return "TEACHER";
 			}
 		}
 
@@ -106,17 +104,11 @@ public class CheckLoginAction implements Action, ServletResponseAware {
 				return ERROR;
 			} else{
 				actionContext.getSession().put("master", manager);
-				httpServletResponse.sendRedirect("manager/index.jsp");
-				return null;
+				return "MANAGER";
 			}
 		}
 
 		actionContext.put("error", "登录类型不合法！");
 		return ERROR;
-	}
-
-	@Override
-	public void setServletResponse(HttpServletResponse httpServletResponse) {
-		this.httpServletResponse = httpServletResponse;
 	}
 }

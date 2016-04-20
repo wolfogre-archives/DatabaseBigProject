@@ -38,5 +38,8 @@
 	<li role="presentation"><a href="selection.jsp">选课管理</a></li>
 	<li role="presentation"><a href="logout">退出系统</a></li>
 </ul>
+<div class="jumbotron" style="height: 100%">
+
+</div>
 </body>
 </html>
