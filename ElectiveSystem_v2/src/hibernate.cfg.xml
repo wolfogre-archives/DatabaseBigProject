@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <!-- 指定连接数据库所用的驱动 -->
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <!-- 指定连接数据库的url -->
+    <property name="connection.url">jdbc:mysql://localhost:3306/elective_system_v1</property>
+    <!-- 指定连接数据库的用户名 -->
+    <property name="connection.username">root</property>
+    <!-- 指定连接数据库的密码 -->
+    <property name="connection.password">DBlocal</property>
+    <!-- 指定连接池里最大连接数 -->
+    <property name="hibernate.c3p0.max_size">200</property>
+    <!-- 指定连接池里最小连接数 -->
+    <property name="hibernate.c3p0.min_size">2</property>
+    <!-- 指定连接池里获得连接的超时时长，单位毫秒 -->
+    <property name="hibernate.c3p0.timeout">5000</property>
+    <!-- 指定连接池里最大缓存多少个Statement对象 -->
+    <property name="hibernate.c3p0.max_statements">100</property>
+    <!-- 每隔多少秒检查连接池里的空闲连接 -->
+    <property name="hibernate.c3p0.idle_test_period">120</property>
+    <!-- 当连接池里面的连接用完的时候，C3P0一下获取的新的连接数 -->
+    <property name="hibernate.c3p0.acquire_increment">2</property>
+    <!-- 每次都验证连接是否可用 -->
+    <property name="hibernate.c3p0.validate">true</property>
+    <!-- 指定数据库方言 -->
+    <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+    <!-- 是否根据需要自动创建数据表 -->
+    <property name="hbm2ddl.auto">validate</property>
+    <!-- 显示Hibernate持久化操作所生成的SQL -->
+    <property name="show_sql">true</property>
+    <!-- 将SQL脚本进行格式化后再输出 -->
+    <property name="hibernate.format_sql">true</property>
+    <!-- 罗列所有持久化类的类名 -->
+    <mapping class="com.wolfogre.domain.Class1"/><!-- TODO -->
+    <mapping class="com.wolfogre.domain.Class2"/><!-- TODO -->
+    <mapping class="com.wolfogre.domain.Class3"/><!-- TODO -->
+  </session-factory>
+</hibernate-configuration>
