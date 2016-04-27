@@ -35,8 +35,8 @@
     <!-- 将SQL脚本进行格式化后再输出 -->
     <property name="hibernate.format_sql">true</property>
     <!-- 罗列所有持久化类的类名 -->
-    <mapping class="com.wolfogre.domain.Class1"/><!-- TODO -->
-    <mapping class="com.wolfogre.domain.Class2"/><!-- TODO -->
-    <mapping class="com.wolfogre.domain.Class3"/><!-- TODO -->
+    <mapping class="com.wolfogre.domain.Student"/>
+    <mapping class="com.wolfogre.domain.Teacher"/>
+    <mapping class="com.wolfogre.domain.Manager"/>
   </session-factory>
 </hibernate-configuration>

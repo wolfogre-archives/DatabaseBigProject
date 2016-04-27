@@ -6,27 +6,31 @@
 
 <struts>
     <constant name="conststructs.devMode" value="true"/>
-    <package name="com.wolfogre" extends="struts-default">
-        <action name="check-login" class="com.wolfogre.action.CheckLoginAction">
-            <result name="error">/index.jsp</result>
-            <result name="STUDENT" type="redirect">studentIndex.action</result>
-            <result name="TEACHER" type="redirect">teacherIndex.action</result>
-            <result name="MANAGER" type="redirect">managerIndex.action</result>
+    <package name="com.wolfogre.action.LoginAction" extends="struts-default" namespace="/">
+        <default-action-ref name="login"/>
+        <action name="login" class="com.wolfogre.action.LoginAction" method="login">
+            <result>/WEB-INF/content/login.jsp</result>
         </action>
-        <action name="logout" class="com.wolfogre.action.LogoutAction">
-            <result type="redirect">index.action</result>
+        <action name="check-login" class="com.wolfogre.action.LoginAction" method="checkLogin">
+            <result name="error" type="chain">login</result>
+            <result name="STUDENT" type="redirectAction">
+                <param name="namespace">/student</param>
+                <param name="actionName">index</param>
+                <!-- 这里有坑，直接写成/student/index跳转不对 -->
+            </result>
+            <result name="TEACHER" type="redirectAction">
+                <param name="namespace">/teacher</param>
+                <param name="actionName">index</param>
+            </result>
+            <result name="MANAGER" type="redirectAction">
+                <param name="namespace">/manager</param>
+                <param name="actionName">index</param>
+            </result>
         </action>
-        <action name="student*" class="com.wolfogre.action.student.{1}Action">
-            <result>/WEB-INF/content/student/{1}.jsp</result>
-        </action>
-        <action name="teacher*" class="com.wolfogre.action.teacher.{1}Action">
-            <result>/WEB-INF/content/teacher/{1}.jsp</result>
-        </action>
-        <action name="manager*" class="com.wolfogre.action.manager.{1}Action">
-            <result>/WEB-INF/content/manager/{1}.jsp</result>
-        </action>
-        <action name="index">
-            <result>/index.jsp</result>
+    </package>
+    <package name="com.wolfogre.action.ManagerAction" extends="struts-default" namespace="/manager">
+        <action name="index" class="com.wolfogre.action.ManagerAction" method="index">
+            <result>/WEB-INF/content/manager/index.jsp</result>
         </action>
     </package>
 </struts>
