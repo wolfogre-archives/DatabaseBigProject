@@ -2,6 +2,7 @@
 <%@ page import="com.wolfogre.domain.Manager" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="com.wolfogre.Information" %>
+<%@ page import="com.wolfogre.domain.Term" %>
 
 <%--
   Created by IntelliJ IDEA.
@@ -45,8 +46,8 @@
 	</div>
 </div>
 <ul class="nav nav-tabs">
-	<li role="presentation" class="active"><a href="index.action">基本信息</a></li>
-	<li role="presentation"><a href="term.action">学期管理</a></li>
+	<li role="presentation"><a href="index.action">基本信息</a></li>
+	<li role="presentation" class="active"><a href="term.action">学期管理</a></li>
 	<li role="presentation"><a href="student.action">学生管理</a></li>
 	<li role="presentation"><a href="teacher.action">教师管理</a></li>
 	<li role="presentation"><a href="manager.action">管理员管理</a></li>
@@ -64,14 +65,44 @@
 	</div>
 	<%
 		}
+		Term nowTerm = (Term)request.getAttribute("term");
 	%>
 	<div class="panel panel-info center-block" style="width: 50%">
-		<div class="panel-body">
-			<h2>姓名：<%=master.getM_name()%></h2>
-			<h2>工号：<%=master.getM_id()%></h2>
-			<h2>身份：管理员</h2>
+		<div class="panel-body text-center">
 			<h2>当前学期：<%=Information.getTermName()%></h2>
-			<h2>当前时间：<%=new SimpleDateFormat("yyyy年M月dd日 HH时mm分").format(new java.util.Date())%></h2>
+			<form class="form-inline" action="update-term.action" method="get">
+				<div class="form-group">
+					<label for="sel_begin">选课时间：</label>
+					<input type="text" class="form-control" id="sel_begin" name="sel_begin" value="<%=Information.getDateFormat().format(nowTerm.getD_sel_begin().getTime())%>">
+				</div>
+				<div class="form-group">
+					<label for="sel_end">至</label>
+					<input type="text" class="form-control" id="sel_end" name="sel_end" value="<%=Information.getDateFormat().format(nowTerm.getD_sel_end().getTime())%>">
+				</div>
+				<button type="submit" class="btn btn-default">修改</button>
+			</form>
+			<form class="form-inline" action="update-term.action" method="get">
+				<div class="form-group">
+					<label for="reg_begin">登分时间：</label>
+					<input type="text" class="form-control" id="reg_begin" name="reg_begin" value="<%=Information.getDateFormat().format(nowTerm.getD_reg_begin().getTime())%>">
+				</div>
+				<div class="form-group">
+					<label for="reg_end">至</label>
+					<input type="text" class="form-control" id="reg_end" name="reg_end" value="<%=Information.getDateFormat().format(nowTerm.getD_reg_end().getTime())%>">
+				</div>
+				<button type="submit" class="btn btn-default">修改</button>
+			</form>
+			<form class="form-inline" action="update-term.action" method="get">
+				<div class="form-group">
+					<label for="inq_begin">查分时间：</label>
+					<input type="text" class="form-control" id="inq_begin" name="inq_begin" value="<%=Information.getDateFormat().format(nowTerm.getD_inq_begin().getTime())%>">
+				</div>
+				<div class="form-group">
+					<label for="inq_end">至</label>
+					<input type="text" class="form-control" id="inq_end" name="inq_end" value="<%=Information.getDateFormat().format(nowTerm.getD_inq_end().getTime())%>">
+				</div>
+				<button type="submit" class="btn btn-default">修改</button>
+			</form>
 		</div>
 	</div>
 </div>

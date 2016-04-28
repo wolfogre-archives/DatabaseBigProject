@@ -32,5 +32,12 @@
         <action name="index" class="com.wolfogre.action.ManagerAction" method="index">
             <result>/WEB-INF/content/manager/index.jsp</result>
         </action>
+        <action name="term" class="com.wolfogre.action.ManagerAction" method="term">
+            <result>/WEB-INF/content/manager/term.jsp</result>
+        </action>
+        <action name="update-term" class="com.wolfogre.action.ManagerAction" method="updateTerm">
+            <result type="redirectAction">term</result>
+            <result name="error" type="chain">term</result>
+        </action>
     </package>
 </struts>
