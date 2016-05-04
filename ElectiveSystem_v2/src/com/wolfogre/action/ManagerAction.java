@@ -3,11 +3,15 @@ package com.wolfogre.action;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.wolfogre.Information;
+import com.wolfogre.domain.Manager;
+import com.wolfogre.domain.Student;
+import com.wolfogre.domain.Teacher;
 import com.wolfogre.domain.Term;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.annotations.NamedNativeQueries;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
@@ -15,11 +19,31 @@ import org.hibernate.service.ServiceRegistryBuilder;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Jason Song(wolfogre.com) on 2016/4/27.
  */
-public class ManagerAction extends ActionSupport {
+public class ManagerAction extends ActionSupport{
+	private Configuration configuration;
+	private ServiceRegistry serviceRegistry;
+	private SessionFactory sessionFactory;
+	private Session session;
+
+	public ManagerAction(){
+		configuration = new Configuration().configure();
+		serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
+		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+		session = sessionFactory.openSession();
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+		session.close();
+		sessionFactory.close();
+		super.finalize();
+	}
+
 	public String index() throws Exception{
 		return SUCCESS;
 	}
@@ -35,6 +59,7 @@ public class ManagerAction extends ActionSupport {
 		actionContext.put("term", nowTerm);
 		return SUCCESS;
 	}
+
 	public String updateTerm() throws Exception{
 		ActionContext actionContext = ActionContext.getContext();
 
@@ -44,13 +69,7 @@ public class ManagerAction extends ActionSupport {
 			return ERROR;
 		}
 
-		Configuration configuration = new Configuration().configure();
-		ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
-		SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-		Session session = sessionFactory.openSession();
-
 		Transaction transaction = session.beginTransaction();
-
 		Term term = (Term)session.get(Term.class, nowTerm.getD_term());
 
 		try{
@@ -61,8 +80,6 @@ public class ManagerAction extends ActionSupport {
 				term.getD_sel_begin().setTime(begin);
 				term.getD_sel_end().setTime(end);
 				transaction.commit();
-				session.close();
-				sessionFactory.close();
 				return SUCCESS;
 			}
 			if(actionContext.getParameters().get("reg_begin") != null && actionContext.getParameters().get("reg_end") != null)
@@ -72,8 +89,6 @@ public class ManagerAction extends ActionSupport {
 				term.getD_reg_begin().setTime(begin);
 				term.getD_reg_end().setTime(end);
 				transaction.commit();
-				session.close();
-				sessionFactory.close();
 				return SUCCESS;
 			}
 			if(actionContext.getParameters().get("inq_begin") != null && actionContext.getParameters().get("inq_end") != null)
@@ -83,15 +98,146 @@ public class ManagerAction extends ActionSupport {
 				term.getD_inq_begin().setTime(begin);
 				term.getD_inq_end().setTime(end);
 				transaction.commit();
-				session.close();
-				sessionFactory.close();
 				return SUCCESS;
 			}
 		} catch (ParseException pe){
 			actionContext.put("error","日期时间格式有误");
 			transaction.rollback();
-			session.close();
-			sessionFactory.close();
+			return ERROR;
+		}
+
+		actionContext.put("error","请确认参数");
+		return ERROR;
+	}
+
+	public String student() throws Exception {
+		List<Student> studentList = session.createSQLQuery("SELECT * FROM S").addEntity(Student.class).list();
+		ActionContext actionContext = ActionContext.getContext();
+		actionContext.put("studentList",studentList);
+		return SUCCESS;
+	}
+
+	public String updateStudent() throws Exception{
+		ActionContext actionContext = ActionContext.getContext();
+
+		Transaction transaction = session.beginTransaction();
+		try{
+			if(actionContext.getParameters().get("delete_data") != null)
+			{
+				String[] parameter = ((String[])actionContext.getParameters().get("cb_delete"));
+				if(parameter.length == 0){
+					actionContext.put("error","请选择目标");
+					return ERROR;
+				}
+				for(String id:parameter){
+					session.delete(session.get(Student.class, id));
+				}
+				transaction.commit();
+				return SUCCESS;
+			}
+
+			if(actionContext.getParameters().get("new_data") != null)
+			{
+				Student newStudent = new Student();
+				newStudent.setS_id(((String[])actionContext.getParameters().get("s_id"))[0]);
+				newStudent.setS_name(((String[])actionContext.getParameters().get("s_name"))[0]);
+				newStudent.setS_pwd(((String[])actionContext.getParameters().get("s_pwd"))[0]);
+				session.save(newStudent);
+				transaction.commit();
+				return SUCCESS;
+			}
+		} catch (Exception ex){
+			actionContext.put("error",ex.getMessage());
+			return ERROR;
+		}
+
+		actionContext.put("error","请确认参数");
+		return ERROR;
+	}
+
+	public String teacher() throws Exception {
+		List<Teacher> teacherList = session.createSQLQuery("SELECT * FROM T").addEntity(Teacher.class).list();
+		ActionContext actionContext = ActionContext.getContext();
+		actionContext.put("teacherList",teacherList);
+		return SUCCESS;
+	}
+
+	public String updateTeacher() throws Exception{
+		ActionContext actionContext = ActionContext.getContext();
+
+		Transaction transaction = session.beginTransaction();
+		try{
+			if(actionContext.getParameters().get("delete_data") != null)
+			{
+				String[] parameter = ((String[])actionContext.getParameters().get("cb_delete"));
+				if(parameter.length == 0){
+					actionContext.put("error","请选择目标");
+					return ERROR;
+				}
+				for(String id:parameter){
+					session.delete(session.get(Teacher.class, id));
+				}
+				transaction.commit();
+				return SUCCESS;
+			}
+
+			if(actionContext.getParameters().get("new_data") != null)
+			{
+				Teacher newTeacher = new Teacher();
+				newTeacher.setT_id(((String[])actionContext.getParameters().get("t_id"))[0]);
+				newTeacher.setT_name(((String[])actionContext.getParameters().get("t_name"))[0]);
+				newTeacher.setT_pwd(((String[])actionContext.getParameters().get("t_pwd"))[0]);
+				session.save(newTeacher);
+				transaction.commit();
+				return SUCCESS;
+			}
+		} catch (Exception ex){
+			actionContext.put("error",ex.getMessage());
+			return ERROR;
+		}
+
+		actionContext.put("error","请确认参数");
+		return ERROR;
+	}
+
+	public String manager() throws Exception {
+		List<Manager> managerList = session.createSQLQuery("SELECT * FROM M").addEntity(Manager.class).list();
+		ActionContext actionContext = ActionContext.getContext();
+		actionContext.put("managerList",managerList);
+		return SUCCESS;
+	}
+
+	public String updateManager() throws Exception{
+		ActionContext actionContext = ActionContext.getContext();
+
+		Transaction transaction = session.beginTransaction();
+		try{
+			if(actionContext.getParameters().get("delete_data") != null)
+			{
+				String[] parameter = ((String[])actionContext.getParameters().get("cb_delete"));
+				if(parameter.length == 0){
+					actionContext.put("error","请选择目标");
+					return ERROR;
+				}
+				for(String id:parameter){
+					session.delete(session.get(Manager.class, id));
+				}
+				transaction.commit();
+				return SUCCESS;
+			}
+
+			if(actionContext.getParameters().get("new_data") != null)
+			{
+				Manager newManager = new Manager();
+				newManager.setM_id(((String[])actionContext.getParameters().get("m_id"))[0]);
+				newManager.setM_name(((String[])actionContext.getParameters().get("m_name"))[0]);
+				newManager.setM_pwd(((String[])actionContext.getParameters().get("m_pwd"))[0]);
+				session.save(newManager);
+				transaction.commit();
+				return SUCCESS;
+			}
+		} catch (Exception ex){
+			actionContext.put("error",ex.getMessage());
 			return ERROR;
 		}
 

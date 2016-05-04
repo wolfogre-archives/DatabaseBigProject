@@ -39,5 +39,26 @@
             <result type="redirectAction">term</result>
             <result name="error" type="chain">term</result>
         </action>
+        <action name="student" class="com.wolfogre.action.ManagerAction" method="student">
+            <result>/WEB-INF/content/manager/student.jsp</result>
+        </action>
+        <action name="update-student" class="com.wolfogre.action.ManagerAction" method="updateStudent">
+            <result type="redirectAction">student</result>
+            <result name="error" type="chain">student</result>
+        </action>
+        <action name="teacher" class="com.wolfogre.action.ManagerAction" method="teacher">
+            <result>/WEB-INF/content/manager/teacher.jsp</result>
+        </action>
+        <action name="update-teacher" class="com.wolfogre.action.ManagerAction" method="updateTeacher">
+            <result type="redirectAction">teacher</result>
+            <result name="error" type="chain">teacher</result>
+        </action>
+        <action name="manager" class="com.wolfogre.action.ManagerAction" method="manager">
+            <result>/WEB-INF/content/manager/manager.jsp</result>
+        </action>
+        <action name="update-manager" class="com.wolfogre.action.ManagerAction" method="updateManager">
+            <result type="redirectAction">manager</result>
+            <result name="error" type="chain">manager</result>
+        </action>
     </package>
 </struts>
