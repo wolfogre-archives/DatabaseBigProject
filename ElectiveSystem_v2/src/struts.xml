@@ -67,5 +67,12 @@
             <result type="redirectAction">course</result>
             <result name="error" type="chain">course</result>
         </action>
+        <action name="open-course" class="com.wolfogre.action.ManagerAction" method="openCourse">
+            <result>/WEB-INF/content/manager/open-course.jsp</result>
+        </action>
+        <action name="update-open-course" class="com.wolfogre.action.ManagerAction" method="updateOpenCourse">
+            <result type="redirectAction">open-course</result>
+            <result name="error" type="chain">open-course</result>
+        </action>
     </package>
 </struts>

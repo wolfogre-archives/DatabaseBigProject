@@ -51,8 +51,8 @@
 	<li role="presentation"><a href="student.action">学生管理</a></li>
 	<li role="presentation"><a href="teacher.action">教师管理</a></li>
 	<li role="presentation"><a href="manager.action">管理员管理</a></li>
-	<li role="presentation" class="active"><a href="course.action">课程管理</a></li>
-	<li role="presentation"><a href="open-course.action">开课管理</a></li>
+	<li role="presentation"><a href="course.action">课程管理</a></li>
+	<li role="presentation" class="active"><a href="open-course.action">开课管理</a></li>
 	<li role="presentation"><a href="selection.action">选课管理</a></li>
 	<li role="presentation"><a href="${pageContext.request.contextPath}/login.action">退出登录</a></li>
 </ul>
@@ -65,13 +65,17 @@
 <%
 	}
 %>
-<form action="update-course" method="get">
+<form action="update-open-course" method="get">
 	<table id="dataTable" class="display" cellspacing="0" width="100%">
 		<thead>
 		<tr>
+			<th>编号</th>
 			<th>课号</th>
-			<th>课名</th>
-			<th>学分</th>
+			<th>教师号</th>
+			<th>学期</th>
+			<th>教室</th>
+			<th>时间</th>
+			<th>容量</th>
 			<th><input type="submit" name="delete_data" value="删除"/></th>
 		</tr>
 		</thead>
@@ -79,24 +83,32 @@
 		<tbody>
 
 		<%
-			List<Course> courseList = (List<Course>)request.getAttribute("courseList");
-			for(Course course : courseList)
+			List<OpenCourse> openCourseList = (List<OpenCourse>)request.getAttribute("openCourseList");
+			for(OpenCourse openCourse : openCourseList)
 			{
 		%>
 		<tr>
-			<td><%=course.getC_id()%></td>
-			<td><%=course.getC_name()%></td>
-			<td><%=course.getC_credit()%></td>
-			<td><input  type="checkbox" name="cb_delete" value="<%=course.getC_id()%>"/></td>
+			<td><%=openCourse.getO_id()%></td>
+			<td><%=openCourse.getC_id()%></td>
+			<td><%=openCourse.getT_id()%></td>
+			<td><%=openCourse.getD_term()%></td>
+			<td><%=openCourse.getO_room()%></td>
+			<td><%=openCourse.getO_time()%></td>
+			<td><%=openCourse.getO_cap()%></td>
+			<td><input  type="checkbox" name="cb_delete" value="<%=openCourse.getC_id()%>"/></td>
 		</tr>
 		<%
 			}
 		%>
 		</tbody>
 		<tr>
+			<td><input type="text" name="o_id" class="form-control" placeholder="编号" readonly></td>
 			<td><input type="text" name="c_id" class="form-control" placeholder="课号"></td>
-			<td><input type="text" name="c_name" class="form-control" placeholder="课名"></td>
-			<td><input type="text" name="c_credit" class="form-control" placeholder="学分"></td>
+			<td><input type="text" name="t_id" class="form-control" placeholder="教师号"></td>
+			<td><input type="text" name="d_term" class="form-control" placeholder="学期"></td>
+			<td><input type="text" name="o_room" class="form-control" placeholder="教室"></td>
+			<td><input type="text" name="o_time" class="form-control" placeholder="时间"></td>
+			<td><input type="text" name="o_cap" class="form-control" placeholder="容量"></td>
 			<td><input type="submit" name="new_data" value="新增"/></td>
 		</tr>
 	</table>

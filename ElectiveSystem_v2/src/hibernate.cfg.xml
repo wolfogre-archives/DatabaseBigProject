@@ -41,6 +41,6 @@
     <mapping class="com.wolfogre.domain.Term"/>
     <mapping class="com.wolfogre.domain.Course"/>
     <mapping class="com.wolfogre.domain.OpenCourse"/>
-
+    <mapping class="com.wolfogre.domain.SelectCourse"/>
   </session-factory>
 </hibernate-configuration>

@@ -317,6 +317,7 @@ public class ManagerAction extends ActionSupport{
 			if(actionContext.getParameters().get("new_data") != null)
 			{
 				OpenCourse newOpenCourse = new OpenCourse();
+				newOpenCourse.setO_id(0);//这句无意义，id会自动分配，但不写还不行
 				newOpenCourse.setC_id(((String[])actionContext.getParameters().get("c_id"))[0]);
 				newOpenCourse.setT_id(((String[])actionContext.getParameters().get("t_id"))[0]);
 				newOpenCourse.setD_term(((String[])actionContext.getParameters().get("d_term"))[0]);
@@ -325,7 +326,6 @@ public class ManagerAction extends ActionSupport{
 				newOpenCourse.setO_cap(Integer.parseInt(((String[])actionContext.getParameters().get("o_cap"))[0]));
 				session.save(newOpenCourse);
 				transaction.commit();
-				//TODO:接着写Strust配置和jsp
 				return SUCCESS;
 			}
 		} catch (Exception ex){
