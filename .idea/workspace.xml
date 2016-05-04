@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8e56624-9b19-46ed-9767-e30015d90998" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/src/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/src/hibernate.cfg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/manager.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/manager.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/student.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/student.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/teacher.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/teacher.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/term.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/term.jsp" />
     </list>
     <ignored path="DatabaseBigProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,36 +32,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ManagerAction.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ManagerAction.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.61323154">
+              <caret line="327" column="38" selection-start-line="327" selection-start-column="38" selection-end-line="327" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1462352939452" expanded="true" signature="3924:3939" placeholder="SELECT * FRO... S" />
-                <marker date="1462352939452" expanded="true" signature="5360:5375" placeholder="SELECT * FRO... T" />
-                <marker date="1462352939452" expanded="true" signature="6796:6811" placeholder="SELECT * FRO... M" />
+                <marker date="1462355099118" expanded="true" signature="3813:3828" placeholder="SELECT * FRO... S" />
+                <marker date="1462355099118" expanded="true" signature="5249:5264" placeholder="SELECT * FRO... T" />
+                <marker date="1462355099118" expanded="true" signature="6685:6700" placeholder="SELECT * FRO... M" />
+                <marker date="1462355099118" expanded="true" signature="8119:8133" placeholder="SELECT * FRO... M" />
+                <marker date="1462355099118" expanded="true" signature="8119:8134" placeholder="SELECT * FRO... C" />
+                <marker date="1462355099118" expanded="true" signature="9576:9590" placeholder="SELECT * FRO... C" />
+                <marker date="1462355099118" expanded="true" signature="9576:9591" placeholder="SELECT * FRO... O" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OgnlRuntime.class" pinned="false" current-in-tab="true">
-        <entry file="jar://$PROJECT_DIR$/lib/ognl.jar!/ognl/OgnlRuntime.class">
+      <file leaf-file-name="Course.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/Course.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36129034">
-              <caret line="482" column="0" selection-start-line="482" selection-start-column="0" selection-end-line="482" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manager.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/manager.jsp">
+      <file leaf-file-name="OpenCourse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/OpenCourse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="11.535714">
-              <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#433#434#0" expanded="true" />
+                <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#489#490#0" expanded="true" />
+                <element signature="e#512#513#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="student.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/student.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.178571">
+              <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -65,18 +92,41 @@
       <file leaf-file-name="teacher.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/teacher.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.178572">
-              <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+            <state vertical-scroll-proportion="-4.535714">
+              <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/login.jsp">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.464286">
-              <caret line="21" column="133" selection-start-line="13" selection-start-column="0" selection-end-line="21" selection-end-column="133" />
+            <state vertical-scroll-proportion="-3.5">
+              <caret line="52" column="43" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="struts.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml">
+          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.086207">
+              <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="course.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/course.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.607142">
+              <caret line="98" column="43" selection-start-line="98" selection-start-column="43" selection-end-line="98" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -94,44 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="struts.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml">
-          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.793103">
-              <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="term.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/term.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.571429">
-              <caret line="50" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="109" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/student.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.892857">
-              <caret line="100" column="46" selection-start-line="100" selection-start-column="46" selection-end-line="100" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Manager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/Manager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+            <state vertical-scroll-proportion="-4.535714">
+              <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -143,8 +160,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="struts_2_3" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -169,15 +186,19 @@
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/context/student/index.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/context/teacher/index.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/LoginAction.java" />
-        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/Term.java" />
-        <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp" />
-        <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/term.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/Class.java" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/manager.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/student.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/teacher.jsp" />
-        <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/manager.jsp" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/term.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/course.jsp" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/OpenClass.java" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/OpenCourse.java" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java" />
       </list>
     </option>
@@ -994,12 +1015,12 @@
       <workItem from="1461744999867" duration="5036000" />
       <workItem from="1461844918604" duration="12893000" />
       <workItem from="1461895500168" duration="19000" />
-      <workItem from="1462348754025" duration="4413000" />
+      <workItem from="1462348754025" duration="6342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22361000" />
+    <option name="totallyTimeSpent" value="24290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1021,17 +1042,17 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20621932" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1050,7 +1071,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java</url>
-          <line>210</line>
+          <line>207</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
@@ -1064,35 +1085,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="64" selection-start-line="81" selection-start-column="64" selection-end-line="81" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1462352939452" expanded="true" signature="3924:3939" placeholder="SELECT * FRO... S" />
-            <marker date="1462352939452" expanded="true" signature="5360:5375" placeholder="SELECT * FRO... T" />
-            <marker date="1462352939452" expanded="true" signature="6796:6811" placeholder="SELECT * FRO... M" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/ognl.jar!/ognl/OgnlRuntime.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="445" column="25" selection-start-line="445" selection-start-column="25" selection-end-line="445" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="6" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/LoginAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1201,9 +1193,13 @@
           <caret line="81" column="64" selection-start-line="81" selection-start-column="64" selection-end-line="81" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1462352939452" expanded="true" signature="3924:3939" placeholder="SELECT * FRO... S" />
-            <marker date="1462352939452" expanded="true" signature="5360:5375" placeholder="SELECT * FRO... T" />
-            <marker date="1462352939452" expanded="true" signature="6796:6811" placeholder="SELECT * FRO... M" />
+            <marker date="1462355099118" expanded="true" signature="3813:3828" placeholder="SELECT * FRO... S" />
+            <marker date="1462355099118" expanded="true" signature="5249:5264" placeholder="SELECT * FRO... T" />
+            <marker date="1462355099118" expanded="true" signature="6685:6700" placeholder="SELECT * FRO... M" />
+            <marker date="1462355099118" expanded="true" signature="8119:8133" placeholder="SELECT * FRO... M" />
+            <marker date="1462355099118" expanded="true" signature="8119:8134" placeholder="SELECT * FRO... C" />
+            <marker date="1462355099118" expanded="true" signature="9576:9590" placeholder="SELECT * FRO... C" />
+            <marker date="1462355099118" expanded="true" signature="9576:9591" placeholder="SELECT * FRO... O" />
           </folding>
         </state>
       </provider>
@@ -1356,6 +1352,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1365,9 +1364,13 @@
           <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1462352939452" expanded="true" signature="3924:3939" placeholder="SELECT * FRO... S" />
-            <marker date="1462352939452" expanded="true" signature="5360:5375" placeholder="SELECT * FRO... T" />
-            <marker date="1462352939452" expanded="true" signature="6796:6811" placeholder="SELECT * FRO... M" />
+            <marker date="1462355099118" expanded="true" signature="3813:3828" placeholder="SELECT * FRO... S" />
+            <marker date="1462355099118" expanded="true" signature="5249:5264" placeholder="SELECT * FRO... T" />
+            <marker date="1462355099118" expanded="true" signature="6685:6700" placeholder="SELECT * FRO... M" />
+            <marker date="1462355099118" expanded="true" signature="8119:8133" placeholder="SELECT * FRO... M" />
+            <marker date="1462355099118" expanded="true" signature="8119:8134" placeholder="SELECT * FRO... C" />
+            <marker date="1462355099118" expanded="true" signature="9576:9590" placeholder="SELECT * FRO... C" />
+            <marker date="1462355099118" expanded="true" signature="9576:9591" placeholder="SELECT * FRO... O" />
           </folding>
         </state>
       </provider>
@@ -1453,14 +1456,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/StudentAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1524,26 +1522,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.25">
-          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/Student.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7917808">
-          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1553,6 +1535,107 @@
         <state vertical-scroll-proportion="-7.464286">
           <caret line="21" column="133" selection-start-line="13" selection-start-column="0" selection-end-line="21" selection-end-column="133" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/manager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.178571">
+          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/ognl.jar!/ognl/OgnlRuntime.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52803737">
+          <caret line="488" column="12" selection-start-line="488" selection-start-column="12" selection-end-line="488" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/StudentAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.767857">
+          <caret line="42" column="52" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/student.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.178571">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/teacher.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.535714">
+          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/term.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.535714">
+          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5">
+          <caret line="52" column="43" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml">
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.086207">
+          <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/course.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.607142">
+          <caret line="98" column="43" selection-start-line="98" selection-start-column="43" selection-end-line="98" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1566,75 +1649,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/student.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.892857">
-          <caret line="100" column="46" selection-start-line="100" selection-start-column="46" selection-end-line="100" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/term.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.571429">
-          <caret line="50" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="109" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/teacher.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.178572">
-          <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml">
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.793103">
-          <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/Manager.java">
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/OpenCourse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/manager.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.535714">
-          <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
-          <folding />
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.61323154">
+          <caret line="327" column="38" selection-start-line="327" selection-start-column="38" selection-end-line="327" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1462352939452" expanded="true" signature="3924:3939" placeholder="SELECT * FRO... S" />
-            <marker date="1462352939452" expanded="true" signature="5360:5375" placeholder="SELECT * FRO... T" />
-            <marker date="1462352939452" expanded="true" signature="6796:6811" placeholder="SELECT * FRO... M" />
+            <marker date="1462355099118" expanded="true" signature="3813:3828" placeholder="SELECT * FRO... S" />
+            <marker date="1462355099118" expanded="true" signature="5249:5264" placeholder="SELECT * FRO... T" />
+            <marker date="1462355099118" expanded="true" signature="6685:6700" placeholder="SELECT * FRO... M" />
+            <marker date="1462355099118" expanded="true" signature="8119:8133" placeholder="SELECT * FRO... M" />
+            <marker date="1462355099118" expanded="true" signature="8119:8134" placeholder="SELECT * FRO... C" />
+            <marker date="1462355099118" expanded="true" signature="9576:9590" placeholder="SELECT * FRO... C" />
+            <marker date="1462355099118" expanded="true" signature="9576:9591" placeholder="SELECT * FRO... O" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/ognl.jar!/ognl/OgnlRuntime.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36129034">
-          <caret line="482" column="0" selection-start-line="482" selection-start-column="0" selection-end-line="482" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -55,7 +55,7 @@
 	<li role="presentation" class="active"><a href="teacher.action">教师管理</a></li>
 	<li role="presentation"><a href="manager.action">管理员管理</a></li>
 	<li role="presentation"><a href="course.action">课程管理</a></li>
-	<li role="presentation"><a href="class.action">开课管理</a></li>
+	<li role="presentation"><a href="open-class.action">开课管理</a></li>
 	<li role="presentation"><a href="selection.action">选课管理</a></li>
 	<li role="presentation"><a href="${pageContext.request.contextPath}/login.action">退出登录</a></li>
 </ul>

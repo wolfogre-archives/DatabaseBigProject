@@ -39,6 +39,8 @@
     <mapping class="com.wolfogre.domain.Teacher"/>
     <mapping class="com.wolfogre.domain.Manager"/>
     <mapping class="com.wolfogre.domain.Term"/>
+    <mapping class="com.wolfogre.domain.Course"/>
+    <mapping class="com.wolfogre.domain.OpenCourse"/>
 
   </session-factory>
 </hibernate-configuration>

@@ -60,5 +60,12 @@
             <result type="redirectAction">manager</result>
             <result name="error" type="chain">manager</result>
         </action>
+        <action name="course" class="com.wolfogre.action.ManagerAction" method="course">
+            <result>/WEB-INF/content/manager/course.jsp</result>
+        </action>
+        <action name="update-course" class="com.wolfogre.action.ManagerAction" method="updateCourse">
+            <result type="redirectAction">course</result>
+            <result name="error" type="chain">course</result>
+        </action>
     </package>
 </struts>

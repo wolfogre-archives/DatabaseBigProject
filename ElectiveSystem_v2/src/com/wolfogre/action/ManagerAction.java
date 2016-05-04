@@ -3,10 +3,7 @@ package com.wolfogre.action;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.wolfogre.Information;
-import com.wolfogre.domain.Manager;
-import com.wolfogre.domain.Student;
-import com.wolfogre.domain.Teacher;
-import com.wolfogre.domain.Term;
+import com.wolfogre.domain.*;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -234,6 +231,101 @@ public class ManagerAction extends ActionSupport{
 				newManager.setM_pwd(((String[])actionContext.getParameters().get("m_pwd"))[0]);
 				session.save(newManager);
 				transaction.commit();
+				return SUCCESS;
+			}
+		} catch (Exception ex){
+			actionContext.put("error",ex.getMessage());
+			return ERROR;
+		}
+
+		actionContext.put("error","请确认参数");
+		return ERROR;
+	}
+
+
+	public String course() throws Exception {
+		List<Course> courseList = session.createSQLQuery("SELECT * FROM C").addEntity(Course.class).list();
+		ActionContext actionContext = ActionContext.getContext();
+		actionContext.put("courseList",courseList);
+		return SUCCESS;
+	}
+
+	public String updateCourse() throws Exception{
+		ActionContext actionContext = ActionContext.getContext();
+
+		Transaction transaction = session.beginTransaction();
+		try{
+			if(actionContext.getParameters().get("delete_data") != null)
+			{
+				String[] parameter = ((String[])actionContext.getParameters().get("cb_delete"));
+				if(parameter.length == 0){
+					actionContext.put("error","请选择目标");
+					return ERROR;
+				}
+				for(String id:parameter){
+					session.delete(session.get(Course.class, id));
+				}
+				transaction.commit();
+				return SUCCESS;
+			}
+
+			if(actionContext.getParameters().get("new_data") != null)
+			{
+				Course newCourse = new Course();
+				newCourse.setC_id(((String[])actionContext.getParameters().get("c_id"))[0]);
+				newCourse.setC_name(((String[])actionContext.getParameters().get("c_name"))[0]);
+				newCourse.setC_credit(Integer.parseInt(((String[])actionContext.getParameters().get("c_credit"))[0]));
+				session.save(newCourse);
+				transaction.commit();
+				return SUCCESS;
+			}
+		} catch (Exception ex){
+			actionContext.put("error",ex.getMessage());
+			return ERROR;
+		}
+
+		actionContext.put("error","请确认参数");
+		return ERROR;
+	}
+
+	public String openCourse() throws Exception {
+		List<OpenCourse> openCourseList = session.createSQLQuery("SELECT * FROM O").addEntity(OpenCourse.class).list();
+		ActionContext actionContext = ActionContext.getContext();
+		actionContext.put("openCourseList",openCourseList);
+		return SUCCESS;
+	}
+
+	public String updateOpenCourse() throws Exception{
+		ActionContext actionContext = ActionContext.getContext();
+
+		Transaction transaction = session.beginTransaction();
+		try{
+			if(actionContext.getParameters().get("delete_data") != null)
+			{
+				String[] parameter = ((String[])actionContext.getParameters().get("cb_delete"));
+				if(parameter.length == 0){
+					actionContext.put("error","请选择目标");
+					return ERROR;
+				}
+				for(String id:parameter){
+					session.delete(session.get(OpenCourse.class, id));
+				}
+				transaction.commit();
+				return SUCCESS;
+			}
+
+			if(actionContext.getParameters().get("new_data") != null)
+			{
+				OpenCourse newOpenCourse = new OpenCourse();
+				newOpenCourse.setC_id(((String[])actionContext.getParameters().get("c_id"))[0]);
+				newOpenCourse.setT_id(((String[])actionContext.getParameters().get("t_id"))[0]);
+				newOpenCourse.setD_term(((String[])actionContext.getParameters().get("d_term"))[0]);
+				newOpenCourse.setO_room(((String[])actionContext.getParameters().get("o_room"))[0]);
+				newOpenCourse.setO_time(((String[])actionContext.getParameters().get("o_time"))[0]);
+				newOpenCourse.setO_cap(Integer.parseInt(((String[])actionContext.getParameters().get("o_cap"))[0]));
+				session.save(newOpenCourse);
+				transaction.commit();
+				//TODO:接着写Strust配置和jsp
 				return SUCCESS;
 			}
 		} catch (Exception ex){

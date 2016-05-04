@@ -1,10 +1,8 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ page import="com.wolfogre.domain.Manager" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="com.wolfogre.Information" %>
-<%@ page import="com.wolfogre.domain.Term" %>
-<%@ page import="com.wolfogre.domain.Student" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.wolfogre.domain.*" %>
 
 <%--
   Created by IntelliJ IDEA.
@@ -50,10 +48,10 @@
 <ul class="nav nav-tabs">
 	<li role="presentation"><a href="index.action">基本信息</a></li>
 	<li role="presentation"><a href="term.action">学期管理</a></li>
-	<li role="presentation"  class="active"><a href="student.action">学生管理</a></li>
+	<li role="presentation"><a href="student.action">学生管理</a></li>
 	<li role="presentation"><a href="teacher.action">教师管理</a></li>
 	<li role="presentation"><a href="manager.action">管理员管理</a></li>
-	<li role="presentation"><a href="course.action">课程管理</a></li>
+	<li role="presentation" class="active"><a href="course.action">课程管理</a></li>
 	<li role="presentation"><a href="open-class.action">开课管理</a></li>
 	<li role="presentation"><a href="selection.action">选课管理</a></li>
 	<li role="presentation"><a href="${pageContext.request.contextPath}/login.action">退出登录</a></li>
@@ -67,13 +65,13 @@
 <%
 	}
 %>
-<form action="update-student" method="get">
+<form action="update-course" method="get">
 	<table id="dataTable" class="display" cellspacing="0" width="100%">
 		<thead>
 		<tr>
-			<th>学号</th>
-			<th>姓名</th>
-			<th>密码</th>
+			<th>课号</th>
+			<th>课名</th>
+			<th>学分</th>
 			<th><input type="submit" name="delete_data" value="删除"/></th>
 		</tr>
 		</thead>
@@ -81,24 +79,24 @@
 		<tbody>
 
 		<%
-			List<Student> studentList = (List<Student>)request.getAttribute("studentList");
-			for(Student student : studentList)
+			List<Course> courseList = (List<Course>)request.getAttribute("courseList");
+			for(Course course : courseList)
 			{
 		%>
 		<tr>
-			<td><%=student.getS_id()%></td>
-			<td><%=student.getS_name()%></td>
-			<td><%=student.getS_pwd()%></td>
-			<td><input  type="checkbox" name="cb_delete" value="<%=student.getS_id()%>"/></td>
+			<td><%=course.getC_id()%></td>
+			<td><%=course.getC_name()%></td>
+			<td><%=course.getC_credit()%></td>
+			<td><input  type="checkbox" name="cb_delete" value="<%=course.getC_id()%>"/></td>
 		</tr>
 		<%
 			}
 		%>
 		</tbody>
 		<tr>
-			<td><input type="text" name="s_id" class="form-control" placeholder="学号"></td>
-			<td><input type="text" name="s_name" class="form-control" placeholder="姓名"></td>
-			<td><input type="text" name="s_pwd" class="form-control" placeholder="密码"></td>
+			<td><input type="text" name="c_id" class="form-control" placeholder="课号"></td>
+			<td><input type="text" name="c_name" class="form-control" placeholder="课名"></td>
+			<td><input type="text" name="c_credit" class="form-control" placeholder="学分"></td>
 			<td><input type="submit" name="new_data" value="新增"/></td>
 		</tr>
 	</table>
