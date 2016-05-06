@@ -74,5 +74,12 @@
             <result type="redirectAction">open-course</result>
             <result name="error" type="chain">open-course</result>
         </action>
+        <action name="select-course" class="com.wolfogre.action.ManagerAction" method="selectCourse">
+            <result>/WEB-INF/content/manager/select-course.jsp</result>
+        </action>
+        <action name="update-select-course" class="com.wolfogre.action.ManagerAction" method="updateSelectCourse">
+            <result type="redirectAction">select-course</result>
+            <result name="error" type="chain">select-course</result>
+        </action>
     </package>
 </struts>

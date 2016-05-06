@@ -336,4 +336,49 @@ public class ManagerAction extends ActionSupport{
 		actionContext.put("error","请确认参数");
 		return ERROR;
 	}
+
+	public String selectCourse() throws Exception {
+		List<SelectCourse> selectCourseList = session.createSQLQuery("SELECT * FROM SO").addEntity(SelectCourse.class).list();
+		ActionContext actionContext = ActionContext.getContext();
+		actionContext.put("selectCourseList",selectCourseList);
+		return SUCCESS;
+	}
+
+	public String updateSelectCourse() throws Exception{
+		ActionContext actionContext = ActionContext.getContext();
+
+		Transaction transaction = session.beginTransaction();
+		try{
+			if(actionContext.getParameters().get("delete_data") != null)
+			{
+				String[] parameter = ((String[])actionContext.getParameters().get("cb_delete"));
+				if(parameter.length == 0){
+					actionContext.put("error","请选择目标");
+					return ERROR;
+				}
+				for(String id:parameter){
+					session.delete(session.get(SelectCourse.class, id));
+				}
+				transaction.commit();
+				return SUCCESS;
+			}
+
+			if(actionContext.getParameters().get("new_data") != null)
+			{
+				SelectCourse newSelectCourse = new SelectCourse();
+				newSelectCourse.setO_id(0);//这句无意义，id会自动分配，但不写还不行
+				newSelectCourse.setO_id(Integer.parseInt(((String[])actionContext.getParameters().get("o_id"))[0]));
+				newSelectCourse.setS_id(((String[])actionContext.getParameters().get("s_id"))[0]);
+				session.save(newSelectCourse);
+				transaction.commit();
+				return SUCCESS;
+			}
+		} catch (Exception ex){
+			actionContext.put("error",ex.getMessage());
+			return ERROR;
+		}
+
+		actionContext.put("error","请确认参数");
+		return ERROR;
+	}
 }

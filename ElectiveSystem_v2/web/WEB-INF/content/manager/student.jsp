@@ -31,6 +31,36 @@
 
 	<title>管理员页面</title>
 </head>
+<script type="text/javascript" class="init">
+	$(document).ready(function() {
+		$('#dataTable').DataTable({
+			language: {
+				"sProcessing": "处理中...",
+				"sLengthMenu": "显示 _MENU_ 项结果",
+				"sZeroRecords": "没有匹配结果",
+				"sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+				"sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+				"sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+				"sInfoPostFix": "",
+				"sSearch": "搜索:",
+				"sUrl": "",
+				"sEmptyTable": "表中数据为空",
+				"sLoadingRecords": "载入中...",
+				"sInfoThousands": ",",
+				"oPaginate": {
+					"sFirst": "首页",
+					"sPrevious": "上页",
+					"sNext": "下页",
+					"sLast": "末页"
+				},
+				"oAria": {
+					"sSortAscending": ": 以升序排列此列",
+					"sSortDescending": ": 以降序排列此列"
+				}
+			}
+		});
+	});
+</script>
 <body>
 <%
 	Manager master = (Manager)session.getAttribute("master");
@@ -55,7 +85,7 @@
 	<li role="presentation"><a href="manager.action">管理员管理</a></li>
 	<li role="presentation"><a href="course.action">课程管理</a></li>
 	<li role="presentation"><a href="open-course.action">开课管理</a></li>
-	<li role="presentation"><a href="selection.action">选课管理</a></li>
+	<li role="presentation"><a href="select-course.action">选课管理</a></li>
 	<li role="presentation"><a href="${pageContext.request.contextPath}/login.action">退出登录</a></li>
 </ul>
 <%
@@ -104,34 +134,4 @@
 	</table>
 </form>
 </body>
-<script type="text/javascript" class="init">
-	$(document).ready(function() {
-		$('#dataTable').DataTable({
-			language: {
-				"sProcessing": "处理中...",
-				"sLengthMenu": "显示 _MENU_ 项结果",
-				"sZeroRecords": "没有匹配结果",
-				"sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
-				"sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
-				"sInfoFiltered": "(由 _MAX_ 项结果过滤)",
-				"sInfoPostFix": "",
-				"sSearch": "搜索:",
-				"sUrl": "",
-				"sEmptyTable": "表中数据为空",
-				"sLoadingRecords": "载入中...",
-				"sInfoThousands": ",",
-				"oPaginate": {
-					"sFirst": "首页",
-					"sPrevious": "上页",
-					"sNext": "下页",
-					"sLast": "末页"
-				},
-				"oAria": {
-					"sSortAscending": ": 以升序排列此列",
-					"sSortDescending": ": 以降序排列此列"
-				}
-			}
-		});
-	});
-</script>
 </html>
