@@ -53,7 +53,7 @@ public class Information {
 	}
 
 	public static String getCopyRight(){
-		return "Copy Right @ 上海大学 宋建鑫 13121602";
+		return "Copy Right &copy; 上海大学 宋建鑫 13121602";
 	}
 
 	public static SimpleDateFormat getDateFormat(){

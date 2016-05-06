@@ -4,19 +4,15 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.wolfogre.Information;
 import com.wolfogre.domain.*;
-import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.annotations.NamedNativeQueries;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Jason Song(wolfogre.com) on 2016/4/27.
@@ -44,6 +40,7 @@ public class ManagerAction extends ActionSupport{
 	public String index() throws Exception{
 		return SUCCESS;
 	}
+
 	public String term() throws Exception{
 		ActionContext actionContext = ActionContext.getContext();
 

@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8e56624-9b19-46ed-9767-e30015d90998" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/SelectCourse.java" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/SelectCourse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/StudentAction.java" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/StudentAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/course.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/course.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/manager.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/manager.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/open-course.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/open-course.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/student.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/student.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/teacher.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/teacher.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/term.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/term.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/login.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/index.jsp" afterPath="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/index.jsp" />
     </list>
     <ignored path="DatabaseBigProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,38 +34,18 @@
         <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="361" column="27" selection-start-line="361" selection-start-column="27" selection-end-line="361" selection-end-column="27" />
+              <caret line="107" column="8" selection-start-line="107" selection-start-column="8" selection-end-line="109" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1462510190776" expanded="true" signature="3813:3828" placeholder="SELECT * FRO... S" />
-                <marker date="1462510190776" expanded="true" signature="5249:5264" placeholder="SELECT * FRO... T" />
-                <marker date="1462510190776" expanded="true" signature="6685:6700" placeholder="SELECT * FRO... M" />
-                <marker date="1462510190776" expanded="true" signature="8119:8133" placeholder="SELECT * FRO... M" />
-                <marker date="1462510190776" expanded="true" signature="8119:8134" placeholder="SELECT * FRO... C" />
-                <marker date="1462510190776" expanded="true" signature="9576:9590" placeholder="SELECT * FRO... C" />
-                <marker date="1462510190776" expanded="true" signature="9576:9591" placeholder="SELECT * FRO... O" />
-                <marker date="1462510190776" expanded="true" signature="11396:11412" placeholder="SELECT * FRO... O" />
+                <marker date="1462511406757" expanded="true" signature="3673:3688" placeholder="SELECT * FRO... S" />
+                <marker date="1462511406757" expanded="true" signature="5109:5124" placeholder="SELECT * FRO... T" />
+                <marker date="1462511406757" expanded="true" signature="6545:6560" placeholder="SELECT * FRO... M" />
+                <marker date="1462511406757" expanded="true" signature="7979:7993" placeholder="SELECT * FRO... M" />
+                <marker date="1462511406757" expanded="true" signature="7979:7994" placeholder="SELECT * FRO... C" />
+                <marker date="1462511406757" expanded="true" signature="9436:9450" placeholder="SELECT * FRO... C" />
+                <marker date="1462511406757" expanded="true" signature="9436:9451" placeholder="SELECT * FRO... O" />
+                <marker date="1462511406757" expanded="true" signature="11256:11272" placeholder="SELECT * FRO... O" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="select-course.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/select-course.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.464286">
-              <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/student.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.25">
-              <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -77,58 +53,61 @@
       <file leaf-file-name="course.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/course.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.464286">
-              <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+            <state vertical-scroll-proportion="-4.071429">
+              <caret line="76" column="6" selection-start-line="62" selection-start-column="0" selection-end-line="76" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teacher.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/teacher.jsp">
+      <file leaf-file-name="select-course.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/select-course.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.464286">
-              <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="term.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/term.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.62015504">
-              <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+            <state vertical-scroll-proportion="-11.107142">
+              <caret line="129" column="7" selection-start-line="97" selection-start-column="0" selection-end-line="129" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.535714">
-              <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+            <state vertical-scroll-proportion="-7.035714">
+              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manager.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/manager.jsp">
+      <file leaf-file-name="timetable.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/timetable.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.464286">
-              <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+            <state vertical-scroll-proportion="-28.071428">
+              <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="open-course.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/open-course.jsp">
+      <file leaf-file-name="Information.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.464286">
-              <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1462511675260" expanded="true" signature="917:974" placeholder="select * fro... D" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.1785715">
+              <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -137,13 +116,45 @@
       <file leaf-file-name="struts.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.8275862">
-              <caret line="81" column="52" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
+            <state vertical-scroll-proportion="-5.172414">
+              <caret line="89" column="54" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
               <folding />
             </state>
           </provider>
           <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentAction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/StudentAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6169154">
+              <caret line="49" column="15" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1462512734532" expanded="true" signature="1464:1480" placeholder="SELECT * FRO... SO" />
+                <marker date="1462512734532" expanded="true" signature="1464:1493" placeholder="SELECT * FRO... SOWH" />
+                <marker date="1462512734532" expanded="true" signature="1464:1495" placeholder="SELECT * FRO... SO" />
+                <marker date="1462512734532" expanded="true" signature="1464:1611" placeholder="SELECT * FRO... SO" />
+                <marker date="1462512734532" expanded="true" signature="1464:1612" placeholder="SELECT * FRO... SO" />
+                <marker date="1462512734532" expanded="true" signature="1464:1657" placeholder="SELECT * FRO... SO" />
+                <marker date="1462512734532" expanded="true" signature="1535:1610" placeholder="SELECT o_id O" />
+                <marker date="1462512734532" expanded="true" signature="1535:1611" placeholder="SELECT o_id O" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/LoginAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -180,22 +191,26 @@
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/context/teacher/index.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/LoginAction.java" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/Term.java" />
-        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/Class.java" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/OpenClass.java" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/OpenCourse.java" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/SelectCourse.java" />
-        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java" />
-        <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/term.jsp" />
-        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/student.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/course.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/manager.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/open-course.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/select-course.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/teacher.jsp" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/login.jsp" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/index.jsp" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/timetable.jsp" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/StudentAction.java" />
       </list>
     </option>
   </component>
@@ -280,6 +295,124 @@
               <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DatabaseBigProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectiveSystem_v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DatabaseBigProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectiveSystem_v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teacher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DatabaseBigProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectiveSystem_v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DatabaseBigProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectiveSystem_v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DatabaseBigProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectiveSystem_v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -292,6 +425,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DatabaseBigProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectiveSystem_v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wolfogre" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DatabaseBigProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElectiveSystem_v2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wolfogre" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="action" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,6 +488,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IntelliJIDEAProjects\DatabaseBigProject\ElectiveSystem_v2\web\WEB-INF\content\student" />
       <recent name="F:\IntelliJIDEAProjects\DatabaseBigProject\ElectiveSystem_v2\web\WEB-INF\content\manager" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -833,12 +1007,12 @@
       <workItem from="1461895500168" duration="19000" />
       <workItem from="1462348754025" duration="6342000" />
       <workItem from="1462356708500" duration="4541000" />
-      <workItem from="1462509105142" duration="1836000" />
+      <workItem from="1462509105142" duration="3626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30667000" />
+    <option name="totallyTimeSpent" value="32457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -853,11 +1027,11 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27332243" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62356794" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.49052134" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.49052134" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -889,7 +1063,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java</url>
-          <line>207</line>
+          <line>204</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
@@ -909,20 +1083,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1708#1709#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-            <marker date="1461863388948" expanded="true" signature="917:974" placeholder="select * fro... D" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/StudentAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -991,14 +1151,14 @@
           <caret line="81" column="64" selection-start-line="81" selection-start-column="64" selection-end-line="81" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1462510190776" expanded="true" signature="3813:3828" placeholder="SELECT * FRO... S" />
-            <marker date="1462510190776" expanded="true" signature="5249:5264" placeholder="SELECT * FRO... T" />
-            <marker date="1462510190776" expanded="true" signature="6685:6700" placeholder="SELECT * FRO... M" />
-            <marker date="1462510190776" expanded="true" signature="8119:8133" placeholder="SELECT * FRO... M" />
-            <marker date="1462510190776" expanded="true" signature="8119:8134" placeholder="SELECT * FRO... C" />
-            <marker date="1462510190776" expanded="true" signature="9576:9590" placeholder="SELECT * FRO... C" />
-            <marker date="1462510190776" expanded="true" signature="9576:9591" placeholder="SELECT * FRO... O" />
-            <marker date="1462510190776" expanded="true" signature="11396:11412" placeholder="SELECT * FRO... O" />
+            <marker date="1462511406757" expanded="true" signature="3673:3688" placeholder="SELECT * FRO... S" />
+            <marker date="1462511406757" expanded="true" signature="5109:5124" placeholder="SELECT * FRO... T" />
+            <marker date="1462511406757" expanded="true" signature="6545:6560" placeholder="SELECT * FRO... M" />
+            <marker date="1462511406757" expanded="true" signature="7979:7993" placeholder="SELECT * FRO... M" />
+            <marker date="1462511406757" expanded="true" signature="7979:7994" placeholder="SELECT * FRO... C" />
+            <marker date="1462511406757" expanded="true" signature="9436:9450" placeholder="SELECT * FRO... C" />
+            <marker date="1462511406757" expanded="true" signature="9436:9451" placeholder="SELECT * FRO... O" />
+            <marker date="1462511406757" expanded="true" signature="11256:11272" placeholder="SELECT * FRO... O" />
           </folding>
         </state>
       </provider>
@@ -1049,11 +1209,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1708#1709#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-            <marker date="1461863388948" expanded="true" signature="917:974" placeholder="select * fro... D" />
+            <element signature="imports" expanded="true" />
+            <marker date="1462511675260" expanded="true" signature="917:974" placeholder="select * fro... D" />
           </folding>
         </state>
       </provider>
@@ -1174,14 +1331,14 @@
           <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1462510190776" expanded="true" signature="3813:3828" placeholder="SELECT * FRO... S" />
-            <marker date="1462510190776" expanded="true" signature="5249:5264" placeholder="SELECT * FRO... T" />
-            <marker date="1462510190776" expanded="true" signature="6685:6700" placeholder="SELECT * FRO... M" />
-            <marker date="1462510190776" expanded="true" signature="8119:8133" placeholder="SELECT * FRO... M" />
-            <marker date="1462510190776" expanded="true" signature="8119:8134" placeholder="SELECT * FRO... C" />
-            <marker date="1462510190776" expanded="true" signature="9576:9590" placeholder="SELECT * FRO... C" />
-            <marker date="1462510190776" expanded="true" signature="9576:9591" placeholder="SELECT * FRO... O" />
-            <marker date="1462510190776" expanded="true" signature="11396:11412" placeholder="SELECT * FRO... O" />
+            <marker date="1462511406757" expanded="true" signature="3673:3688" placeholder="SELECT * FRO... S" />
+            <marker date="1462511406757" expanded="true" signature="5109:5124" placeholder="SELECT * FRO... T" />
+            <marker date="1462511406757" expanded="true" signature="6545:6560" placeholder="SELECT * FRO... M" />
+            <marker date="1462511406757" expanded="true" signature="7979:7993" placeholder="SELECT * FRO... M" />
+            <marker date="1462511406757" expanded="true" signature="7979:7994" placeholder="SELECT * FRO... C" />
+            <marker date="1462511406757" expanded="true" signature="9436:9450" placeholder="SELECT * FRO... C" />
+            <marker date="1462511406757" expanded="true" signature="9436:9451" placeholder="SELECT * FRO... O" />
+            <marker date="1462511406757" expanded="true" signature="11256:11272" placeholder="SELECT * FRO... O" />
           </folding>
         </state>
       </provider>
@@ -1209,11 +1366,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1708#1709#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-            <marker date="1461863388948" expanded="true" signature="917:974" placeholder="select * fro... D" />
+            <element signature="imports" expanded="true" />
+            <marker date="1462511675260" expanded="true" signature="917:974" placeholder="select * fro... D" />
           </folding>
         </state>
       </provider>
@@ -1311,36 +1465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1708#1709#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-            <marker date="1461863388948" expanded="true" signature="917:974" placeholder="select * fro... D" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.464286">
-          <caret line="21" column="133" selection-start-line="13" selection-start-column="0" selection-end-line="21" selection-end-column="133" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/StudentAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/Course.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1348,24 +1472,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/LoginAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="22" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.964286">
-          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1469,51 +1575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8275862">
-          <caret line="81" column="52" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="361" column="27" selection-start-line="361" selection-start-column="27" selection-end-line="361" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1462510190776" expanded="true" signature="3813:3828" placeholder="SELECT * FRO... S" />
-            <marker date="1462510190776" expanded="true" signature="5249:5264" placeholder="SELECT * FRO... T" />
-            <marker date="1462510190776" expanded="true" signature="6685:6700" placeholder="SELECT * FRO... M" />
-            <marker date="1462510190776" expanded="true" signature="8119:8133" placeholder="SELECT * FRO... M" />
-            <marker date="1462510190776" expanded="true" signature="8119:8134" placeholder="SELECT * FRO... C" />
-            <marker date="1462510190776" expanded="true" signature="9576:9590" placeholder="SELECT * FRO... C" />
-            <marker date="1462510190776" expanded="true" signature="9576:9591" placeholder="SELECT * FRO... O" />
-            <marker date="1462510190776" expanded="true" signature="11396:11412" placeholder="SELECT * FRO... O" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/course.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.464286">
-          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.535714">
-          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/manager.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.464286">
@@ -1523,14 +1584,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/open-course.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.464286">
-          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/select-course.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.464286">
           <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
@@ -1556,9 +1609,125 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/term.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.62015504">
+        <state vertical-scroll-proportion="8.571428">
           <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.357143">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="73" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/LoginAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1785715">
+          <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.035714">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.172414">
+          <caret line="89" column="54" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/ManagerAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="107" column="8" selection-start-line="107" selection-start-column="8" selection-end-line="109" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1462511406757" expanded="true" signature="3673:3688" placeholder="SELECT * FRO... S" />
+            <marker date="1462511406757" expanded="true" signature="5109:5124" placeholder="SELECT * FRO... T" />
+            <marker date="1462511406757" expanded="true" signature="6545:6560" placeholder="SELECT * FRO... M" />
+            <marker date="1462511406757" expanded="true" signature="7979:7993" placeholder="SELECT * FRO... M" />
+            <marker date="1462511406757" expanded="true" signature="7979:7994" placeholder="SELECT * FRO... C" />
+            <marker date="1462511406757" expanded="true" signature="9436:9450" placeholder="SELECT * FRO... C" />
+            <marker date="1462511406757" expanded="true" signature="9436:9451" placeholder="SELECT * FRO... O" />
+            <marker date="1462511406757" expanded="true" signature="11256:11272" placeholder="SELECT * FRO... O" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/course.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.071429">
+          <caret line="76" column="6" selection-start-line="62" selection-start-column="0" selection-end-line="76" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/select-course.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.107142">
+          <caret line="129" column="7" selection-start-line="97" selection-start-column="0" selection-end-line="129" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/timetable.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.071428">
+          <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1462511675260" expanded="true" signature="917:974" placeholder="select * fro... D" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/StudentAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6169154">
+          <caret line="49" column="15" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1462512734532" expanded="true" signature="1464:1480" placeholder="SELECT * FRO... SO" />
+            <marker date="1462512734532" expanded="true" signature="1464:1493" placeholder="SELECT * FRO... SOWH" />
+            <marker date="1462512734532" expanded="true" signature="1464:1495" placeholder="SELECT * FRO... SO" />
+            <marker date="1462512734532" expanded="true" signature="1464:1611" placeholder="SELECT * FRO... SO" />
+            <marker date="1462512734532" expanded="true" signature="1464:1612" placeholder="SELECT * FRO... SO" />
+            <marker date="1462512734532" expanded="true" signature="1464:1657" placeholder="SELECT * FRO... SO" />
+            <marker date="1462512734532" expanded="true" signature="1535:1610" placeholder="SELECT o_id O" />
+            <marker date="1462512734532" expanded="true" signature="1535:1611" placeholder="SELECT o_id O" />
+          </folding>
         </state>
       </provider>
     </entry>

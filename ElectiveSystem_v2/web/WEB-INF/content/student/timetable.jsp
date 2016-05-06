@@ -1,6 +1,8 @@
 <%@ page import="com.wolfogre.domain.Student" %>
 <%@ page import="java.text.SimpleDateFormat" %>
-<%@ page import="com.wolfogre.Information" %><%--
+<%@ page import="com.wolfogre.Information" %>
+<%@ page import="com.wolfogre.domain.SelectCourse" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Jason Song(wolfogre.com)
   Date: 2016/4/13
@@ -78,16 +80,38 @@
 	<li role="presentation"><a href="course.action">选课退课</a></li>
 	<li role="presentation"><a href="${pageContext.request.contextPath}/login.action">退出登录</a></li>
 </ul>
-<div class="jumbotron" style="height: 100%">
-	<div class="panel panel-info center-block" style="width: 50%">
-		<div class="panel-body">
-			<h2>姓名：<%=master.getS_name()%></h2>
-			<h2>学号：<%=master.getS_id()%></h2>
-			<h2>身份：学生</h2>
-			<h2>当前学期：<%=Information.getTermName()%></h2>
-			<h2>当前时间：<%=new SimpleDateFormat("yyyy年M月dd日 HH时mm分").format(new java.util.Date())%></h2>
-		</div>
-	</div>
-</div>
+<form action="update-select-course" method="get">
+	<table id="dataTable" class="display" cellspacing="0" width="100%">
+		<thead>
+		<tr>
+			<th>学号</th>
+			<th>开课号</th>
+			<th><input type="submit" name="delete_data" value="删除"/></th>
+		</tr>
+		</thead>
+
+		<tbody>
+
+		<%
+			List<SelectCourse> selectCourseList = (List<SelectCourse>)request.getAttribute("selectCourseList");
+			for(SelectCourse selectCourse : selectCourseList)
+			{
+		%>
+		<tr>
+			<td><%=selectCourse.getS_id()%></td>
+			<td><%=selectCourse.getO_id()%></td>
+			<td><input  type="checkbox" name="cb_delete" value="<%=selectCourse.getO_id()%>"/></td>
+		</tr>
+		<%
+			}
+		%>
+		</tbody>
+		<tr>
+			<td><input type="text" name="s_id" class="form-control" placeholder="学号"></td>
+			<td><input type="text" name="o_id" class="form-control" placeholder="开课号"></td>
+			<td><input type="submit" name="new_data" value="新增"/></td>
+		</tr>
+	</table>
+</form>
 </body>
 </html>
