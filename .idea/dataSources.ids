@@ -181,43 +181,46 @@
         <mandatory>1</mandatory>
         <data-type>int(11) unsigned</data-type>
       </column>
-      <column id="47" parent="7" name="so_score">
+      <column id="47" parent="7" name="so_ps_score">
         <data-type>double</data-type>
       </column>
-      <index id="48" parent="7" name="o_id">
+      <column id="48" parent="7" name="so_ks_score">
+        <data-type>double</data-type>
+      </column>
+      <index id="49" parent="7" name="o_id">
         <columns>o_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="49" parent="7" name="PRIMARY">
+      <key id="50" parent="7" name="PRIMARY">
         <columns>s_id
 o_id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="50" parent="7" name="o_id">
+      <foreign-key id="51" parent="7" name="o_id">
         <columns>o_id</columns>
         <ref-key>~.o.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="51" parent="7" name="s_id">
+      <foreign-key id="52" parent="7" name="s_id">
         <columns>s_id</columns>
         <ref-key>~.s.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="52" parent="8" name="t_id">
+      <column id="53" parent="8" name="t_id">
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="53" parent="8" name="t_name">
+      <column id="54" parent="8" name="t_name">
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="54" parent="8" name="t_pwd">
+      <column id="55" parent="8" name="t_pwd">
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
       </column>
-      <key id="55" parent="8" name="PRIMARY">
+      <key id="56" parent="8" name="PRIMARY">
         <columns>t_id</columns>
         <primary>1</primary>
       </key>

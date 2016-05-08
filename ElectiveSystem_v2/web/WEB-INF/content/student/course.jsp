@@ -163,7 +163,7 @@
 		<td><%=Information.getCourseTimeString(data.getValue().get("上课时间").toString())%></td>
 		<td><%=data.getValue().get("上课地点")%></td>
 		<td><%=data.getValue().get("选课人数")%></td>
-		<td><a href="update-course?o_id=<%=data.getKey()%>">选课</a></td>
+		<td><a href="update-course?new_data=new_data&o_id=<%=data.getKey()%>">选课</a></td>
 	</tr>
 	<%
 		}
@@ -202,7 +202,7 @@
 		<td><%=Information.getCourseTimeString(data.getValue().get("上课时间").toString())%></td>
 		<td><%=data.getValue().get("上课地点")%></td>
 		<td><%=data.getValue().get("选课人数")%></td>
-		<td><a href="update-course?1##o_id=<%=data.getKey()%>">退课</a></td>
+		<td><a href="update-course?delete_data=delete_data&o_id=<%=data.getKey()%>">退课</a></td>
 	</tr>
 	<%
 		}

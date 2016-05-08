@@ -147,64 +147,90 @@ public class StudentAction extends ActionSupport {
 	public String updateCourse(){
 		ActionContext actionContext = ActionContext.getContext();
 		Student student = ((Student)actionContext.getSession().get("master"));
-		try{
-			if(actionContext.getParameters().get("o_id") != null)
-			{
-				String[] parameter = ((String[])actionContext.getParameters().get("o_id"));
-				int oId = Integer.parseInt(parameter[0]);
+		if(actionContext.getParameters().get("new_data") != null) {
+			try{
+				if(actionContext.getParameters().get("o_id") != null) {
+					String[] parameter = ((String[])actionContext.getParameters().get("o_id"));
+					int oId = Integer.parseInt(parameter[0]);
 
-				if(session.get(OpenCourse.class, oId) == null){
-					actionContext.put("error","课程不存在");
-					return ERROR;
+					OpenCourse openCourse = (OpenCourse)session.get(OpenCourse.class, oId);
+
+					if(openCourse == null){
+						actionContext.put("error","课程不存在");
+						return ERROR;
+					}
+
+					if(session.createSQLQuery("SELECT * FROM SO WHERE s_id = '" + student.getS_id() + "' and o_id = " + oId + "" ).list().size() != 0) {
+						actionContext.put("error","已选该课程");
+						//TODO:这里有Bug,同一门课不同老师开，可以重复选
+						return ERROR;
+					}
+
+
+					int num = this.session.createSQLQuery("SELECT * FROM SO WHERE o_id = " + openCourse.getO_id()).list().size();
+					if(num >= openCourse.getO_cap()){
+						actionContext.put("error","选课人数已满");
+						return ERROR;
+					}
+
+					List<SelectCourse> selectCourseList = session
+							.createSQLQuery("SELECT * FROM SO WHERE s_id = '" + student.getS_id() + "' and o_id in (SELECT o_id FROM O WHERE d_term = '" + Information.getTerm().getD_term() +"')")
+							.addEntity(SelectCourse.class).list();
+					Information.initTimeTable();
+					for(SelectCourse selectCourse : selectCourseList){
+						String courseTime = ((OpenCourse)session.get(OpenCourse.class, selectCourse.getO_id())).getO_time();
+						Information.getCourseTimeString('X',courseTime);
+					}
+
+					if(Information.ifTimeTableConflict(openCourse.getO_time())){
+						actionContext.put("error","课时冲突");
+						return ERROR;
+					}
+
+					Transaction transaction = session.beginTransaction();
+					SelectCourse newSelectCourse = new SelectCourse();
+					newSelectCourse.setO_id(oId);
+					newSelectCourse.setS_id(student.getS_id());
+					session.save(newSelectCourse);
+					transaction.commit();
+					return SUCCESS;
 				}
-
-				OpenCourse openCourse = (OpenCourse)session.get(OpenCourse.class, oId);
-
-				if(openCourse == null){
-					actionContext.put("error","课程不存在");
-					return ERROR;
-				}
-
-				if(session.createQuery("SELECT * FROM SO WHERE s_id = '" + student.getS_id() + "' and o_id = ''" + oId + "''" ).list().size() != 0) {
-					actionContext.put("error","已选该课程");
-					//TODO:这里有Bug,同一门课不同老师开，可以重复选
-					return ERROR;
-				}
-
-
-				int num = this.session.createSQLQuery("SELECT * FROM SO WHERE o_id = " + openCourse.getO_id()).list().size();
-				if(num >= openCourse.getO_cap()){
-					actionContext.put("error","选课人数已满");
-					return ERROR;
-				}
-
-				List<SelectCourse> selectCourseList = session
-						.createSQLQuery("SELECT * FROM SO WHERE s_id = '" + student.getS_id() + "' and o_id in (SELECT o_id FROM O WHERE d_term = '" + Information.getTerm().getD_term() +"')")
-						.addEntity(SelectCourse.class).list();
-				Information.initTimeTable();
-				for(SelectCourse selectCourse : selectCourseList){
-					String courseTime = ((OpenCourse)session.get(OpenCourse.class, selectCourse.getO_id())).getO_time();
-					Information.getCourseTimeString('X',courseTime);
-				}
-
-				if(Information.ifTimeTableConflict(openCourse.getO_time())){
-					actionContext.put("error","课时冲突");
-					return ERROR;
-				}
-
-				Transaction transaction = session.beginTransaction();
-				SelectCourse newSelectCourse = new SelectCourse();
-				newSelectCourse.setO_id(oId);
-				newSelectCourse.setS_id(student.getS_id());
-				session.save(newSelectCourse);
-				transaction.commit();
-				return SUCCESS;
+			} catch (Exception ex){
+				actionContext.put("error",ex.getMessage());
+				return ERROR;
 			}
-		} catch (Exception ex){
-			actionContext.put("error",ex.getMessage());
-			return ERROR;
 		}
-		//TODO：退课逻辑
+		if(actionContext.getParameters().get("delete_data") != null) {
+			try{
+				if(actionContext.getParameters().get("o_id") != null) {
+					String[] parameter = ((String[])actionContext.getParameters().get("o_id"));
+					int oId = Integer.parseInt(parameter[0]);
+
+					OpenCourse openCourse = (OpenCourse)session.get(OpenCourse.class, oId);
+
+					if(openCourse == null){
+						actionContext.put("error","课程不存在");
+						return ERROR;
+					}
+
+					if(session.createSQLQuery("SELECT * FROM SO WHERE s_id = '" + student.getS_id() + "' and o_id = " + oId + "" ).list().size() == 0) {
+						actionContext.put("error","未选该课程");
+						return ERROR;
+					}
+
+					Transaction transaction = session.beginTransaction();
+					SelectCourse newSelectCourse = new SelectCourse();
+					newSelectCourse.setO_id(oId);
+					newSelectCourse.setS_id(student.getS_id());
+					session.delete(newSelectCourse);
+					transaction.commit();
+					return SUCCESS;
+				}
+			} catch (Exception ex){
+				actionContext.put("error",ex.getMessage());
+				return ERROR;
+			}
+		}
 		actionContext.put("error","请确认参数");
 		return ERROR;
 	}
