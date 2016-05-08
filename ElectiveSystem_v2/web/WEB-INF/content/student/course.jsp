@@ -1,9 +1,6 @@
 <%@ page import="com.wolfogre.domain.Student" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="com.wolfogre.Information" %>
-<%@ page import="com.wolfogre.domain.SelectCourse" %>
-<%@ page import="java.util.List" %>
-<%@ page import="com.wolfogre.domain.OpenCourse" %>
 <%@ page import="java.util.HashMap" %><%--
   Created by IntelliJ IDEA.
   User: Jason Song(wolfogre.com)
@@ -55,11 +52,7 @@
 					"sSortAscending": ": 以升序排列此列",
 					"sSortDescending": ": 以降序排列此列"
 				}
-			},
-			paging: false,//禁用分页
-			searching: false,//禁用搜索
-			ordering:  false,//禁用排序
-			info: false//禁用最下角信息
+			}
 		});
 		$('#dataTable2').DataTable({
 			language: {
@@ -85,11 +78,7 @@
 					"sSortAscending": ": 以升序排列此列",
 					"sSortDescending": ": 以降序排列此列"
 				}
-			},
-			paging: false,//禁用分页
-			searching: false,//禁用搜索
-			ordering:  false,//禁用排序
-			info: false//禁用最下角信息
+			}
 		});
 	});
 </script>
@@ -111,15 +100,42 @@
 </div>
 <ul class="nav nav-tabs">
 	<li role="presentation"><a href="index.action">基本信息</a></li>
-	<li role="presentation" class="active"><a href="timetable.action">课表查询</a></li>
+	<li role="presentation"><a href="timetable.action">课表查询</a></li>
 	<li role="presentation"><a href="score.action">成绩查询</a></li>
-	<li role="presentation"><a href="course.action">选课退课</a></li>
+	<li role="presentation" class="active"><a href="course.action">选课退课</a></li>
 	<li role="presentation"><a href="${pageContext.request.contextPath}/login.action">退出登录</a></li>
 </ul>
+<%
+	if(!Information.isInInquireTime()){
+%>
+<div class="jumbotron" style="height: 100%">
+	<div class="panel panel-info center-block" style="width: 50%">
+		<div class="panel-body">
+			<h1>选课时间未到</h1>
+			<h2>当前学期：<%=Information.getTermName()%></h2>
+			<h2>当前时间：<%=new SimpleDateFormat("yyyy年M月dd日 HH时mm分").format(new java.util.Date())%></h2>
+			<h2>选课开始时间：<%=new SimpleDateFormat("yyyy年M月dd日 HH时mm分").format(Information.getSelectBeginTime())%></h2>
+			<h2>选课结束时间：<%=new SimpleDateFormat("yyyy年M月dd日 HH时mm分").format(Information.getSelectEndTime())%></h2>
+		</div>
+	</div>
+</div>
+<%
+		return;
+	}
+%>
+<%
+	if(request.getAttribute("error") != null){
+%>
+<div class="alert alert-danger center-block" role="alert" style="width: 500px;" align="center">
+	<strong>选课失败：</strong><%=request.getAttribute("error")%>
+</div>
+<%
+	}
+%>
 <table id="dataTable1" class="display" cellspacing="0" width="100%">
+	<h2 align="center">可选课程</h2>
 	<thead>
 	<tr>
-		<th>序号</th>
 		<th>课程号</th>
 		<th>课程名</th>
 		<th>教师号</th>
@@ -127,69 +143,72 @@
 		<th>学分</th>
 		<th>上课时间</th>
 		<th>上课地点</th>
+		<th>选课人数</th>
+		<th></th>
 	</tr>
 	</thead>
 
 	<tbody>
-
 	<%
-		HashMap<Character, HashMap<String, Object>> selectData = (HashMap<Character, HashMap<String, Object>>)request.getAttribute("selectData");
-		Information.initTimeTable();
-		for(char index = 'A'; selectData.get(index) != null; ++index )
+		HashMap<Integer, HashMap<String, Object>> 可选课程 = (HashMap<Integer, HashMap<String, Object>>)request.getAttribute("可选课程");
+		for(HashMap.Entry<Integer, HashMap<String, Object>> data : 可选课程.entrySet())
 		{
 	%>
 	<tr>
-		<td><%=index%></td>
-		<td><%=selectData.get(index).get("课程号")%></td>
-		<td><%=selectData.get(index).get("课程名")%></td>
-		<td><%=selectData.get(index).get("教师号")%></td>
-		<td><%=selectData.get(index).get("教师名")%></td>
-		<td><%=selectData.get(index).get("学分")%></td>
-		<td><%=Information.getCourseTimeString(index, selectData.get(index).get("上课时间").toString())%></td>
-		<td><%=selectData.get(index).get("上课地点")%></td>
+		<td><%=data.getValue().get("课程号")%></td>
+		<td><%=data.getValue().get("课程名")%></td>
+		<td><%=data.getValue().get("教师号")%></td>
+		<td><%=data.getValue().get("教师名")%></td>
+		<td><%=data.getValue().get("学分")%></td>
+		<td><%=Information.getCourseTimeString(data.getValue().get("上课时间").toString())%></td>
+		<td><%=data.getValue().get("上课地点")%></td>
+		<td><%=data.getValue().get("选课人数")%></td>
+		<td><a href="update-course?o_id=<%=data.getKey()%>">选课</a></td>
 	</tr>
 	<%
 		}
 	%>
 	</tbody>
 </table>
-<table id="dataTable2" class="cell-border" style="text-align:center" cellspacing="0" width="100%">
+
+<table id="dataTable2" class="display" cellspacing="0" width="100%">
+	<h2 align="center">已选课程</h2>
 	<thead>
 	<tr>
-		<th  style="text-align:center">时间</th>
-		<th  style="text-align:center">星期一</th>
-		<th  style="text-align:center">星期二</th>
-		<th  style="text-align:center">星期三</th>
-		<th  style="text-align:center">星期四</th>
-		<th  style="text-align:center">星期五</th>
-		<th  style="text-align:center">星期六</th>
-		<th  style="text-align:center">星期日</th>
+		<th>课程号</th>
+		<th>课程名</th>
+		<th>教师号</th>
+		<th>教师名</th>
+		<th>学分</th>
+		<th>上课时间</th>
+		<th>上课地点</th>
+		<th>选课人数</th>
+		<th></th>
 	</tr>
 	</thead>
 
 	<tbody>
-
 	<%
-		char[][] timeTable = Information.getTimeTable();
-		for(int raw = 0; raw < 13; ++raw)
+		HashMap<Integer, HashMap<String, Object>> 已选课程 = (HashMap<Integer, HashMap<String, Object>>)request.getAttribute("已选课程");
+		for(HashMap.Entry<Integer, HashMap<String, Object>> data : 已选课程.entrySet())
 		{
 	%>
 	<tr>
-		<td><%=raw + 1%></td>
-		<%
-			for(int col = 0; col < 7; ++col) {
-				if(timeTable[raw][col] != Character.MIN_VALUE){
-					%><td><%=timeTable[raw][col]%></td><%
-				} else {
-					%><td></td><%
-				}
-			}
-		%>
+		<td><%=data.getValue().get("课程号")%></td>
+		<td><%=data.getValue().get("课程名")%></td>
+		<td><%=data.getValue().get("教师号")%></td>
+		<td><%=data.getValue().get("教师名")%></td>
+		<td><%=data.getValue().get("学分")%></td>
+		<td><%=Information.getCourseTimeString(data.getValue().get("上课时间").toString())%></td>
+		<td><%=data.getValue().get("上课地点")%></td>
+		<td><%=data.getValue().get("选课人数")%></td>
+		<td><a href="update-course?1##o_id=<%=data.getKey()%>">退课</a></td>
 	</tr>
 	<%
 		}
 	%>
 	</tbody>
 </table>
+
 </body>
 </html>

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="hibernate.cfg.xml/Hibernate" uuid="389f28ab-67d4-447d-ac2e-80c70222efaa">
+      <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <user-password>dfeedfe8dfc6dfc5dfc9dfcbdfc6</user-password>
       <schema-pattern>elective_system_v1.*</schema-pattern>
       <default-schemas>elective_system_v1.*</default-schemas>
     </data-source>

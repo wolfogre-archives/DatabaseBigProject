@@ -15,7 +15,10 @@ public class SelectCourse implements Serializable {
 	private String s_id;
 	@Id
 	private Integer o_id;
-	//TODO:不确定这样能不能搞联合主键，继续测试
+
+	private Double so_ps_score;
+
+	private Double so_ks_score;
 
 	public String getS_id() {
 		return s_id;
@@ -31,6 +34,22 @@ public class SelectCourse implements Serializable {
 
 	public void setO_id(Integer o_id) {
 		this.o_id = o_id;
+	}
+
+	public Double getSo_ps_score() {
+		return so_ps_score;
+	}
+
+	public void setSo_ps_score(Double so_ps_score) {
+		this.so_ps_score = so_ps_score;
+	}
+
+	public Double getSo_ks_score() {
+		return so_ks_score;
+	}
+
+	public void setSo_ks_score(Double so_ks_score) {
+		this.so_ks_score = so_ks_score;
 	}
 
 	@Override

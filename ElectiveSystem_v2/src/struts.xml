@@ -89,5 +89,15 @@
         <action name="timetable" class="com.wolfogre.action.StudentAction" method="timetable">
             <result>/WEB-INF/content/student/timetable.jsp</result>
         </action>
+        <action name="score" class="com.wolfogre.action.StudentAction" method="score">
+            <result>/WEB-INF/content/student/score.jsp</result>
+        </action>
+        <action name="course" class="com.wolfogre.action.StudentAction" method="course">
+            <result>/WEB-INF/content/student/course.jsp</result>
+        </action>
+        <action name="update-course" class="com.wolfogre.action.StudentAction" method="updateCourse">
+            <result type="redirectAction">course</result>
+            <result name="error" type="chain">course</result>
+        </action>
     </package>
 </struts>
