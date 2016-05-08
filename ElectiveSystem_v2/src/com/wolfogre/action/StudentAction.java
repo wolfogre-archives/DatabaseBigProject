@@ -146,6 +146,7 @@ public class StudentAction extends ActionSupport {
 
 	public String updateCourse(){
 		ActionContext actionContext = ActionContext.getContext();
+		Student student = ((Student)actionContext.getSession().get("master"));
 		try{
 			if(actionContext.getParameters().get("o_id") != null)
 			{
@@ -164,17 +165,37 @@ public class StudentAction extends ActionSupport {
 					return ERROR;
 				}
 
+				if(session.createQuery("SELECT * FROM SO WHERE s_id = '" + student.getS_id() + "' and o_id = ''" + oId + "''" ).list().size() != 0) {
+					actionContext.put("error","已选该课程");
+					//TODO:这里有Bug,同一门课不同老师开，可以重复选
+					return ERROR;
+				}
+
+
 				int num = this.session.createSQLQuery("SELECT * FROM SO WHERE o_id = " + openCourse.getO_id()).list().size();
 				if(num >= openCourse.getO_cap()){
 					actionContext.put("error","选课人数已满");
 					return ERROR;
 				}
-				//TODO：还要检查课时冲突和已经选课
+
+				List<SelectCourse> selectCourseList = session
+						.createSQLQuery("SELECT * FROM SO WHERE s_id = '" + student.getS_id() + "' and o_id in (SELECT o_id FROM O WHERE d_term = '" + Information.getTerm().getD_term() +"')")
+						.addEntity(SelectCourse.class).list();
+				Information.initTimeTable();
+				for(SelectCourse selectCourse : selectCourseList){
+					String courseTime = ((OpenCourse)session.get(OpenCourse.class, selectCourse.getO_id())).getO_time();
+					Information.getCourseTimeString('X',courseTime);
+				}
+
+				if(Information.ifTimeTableConflict(openCourse.getO_time())){
+					actionContext.put("error","课时冲突");
+					return ERROR;
+				}
 
 				Transaction transaction = session.beginTransaction();
 				SelectCourse newSelectCourse = new SelectCourse();
 				newSelectCourse.setO_id(oId);
-				newSelectCourse.setS_id(((Student)actionContext.getSession().get("master")).getS_id());
+				newSelectCourse.setS_id(student.getS_id());
 				session.save(newSelectCourse);
 				transaction.commit();
 				return SUCCESS;
@@ -183,7 +204,7 @@ public class StudentAction extends ActionSupport {
 			actionContext.put("error",ex.getMessage());
 			return ERROR;
 		}
-
+		//TODO：退课逻辑
 		actionContext.put("error","请确认参数");
 		return ERROR;
 	}

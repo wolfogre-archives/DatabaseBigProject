@@ -119,6 +119,20 @@ public class Information {
 		return timeTable;
 	}
 
+	public static boolean ifTimeTableConflict(String courseTime){
+		String split1[] = courseTime.split("\\$");
+		for(String s: split1){
+			String split2[] = s.split("#");
+			int day = Integer.parseInt(split2[0]);
+			int begin = Integer.parseInt(split2[1]);
+			int end = Integer.parseInt(split2[2]);
+			for(int i = begin - 1; i <= end - 1; ++i)
+				if(timeTable[i][day - 1] != Character.MIN_VALUE)
+					return true;
+		}
+		return false;
+	}
+
 	public static Date getSelectBeginTime() throws Exception {
 		return getTerm().getD_sel_begin().getTime();
 	}
