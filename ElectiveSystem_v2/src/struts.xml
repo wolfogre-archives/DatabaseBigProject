@@ -100,4 +100,12 @@
             <result name="error" type="chain">course</result>
         </action>
     </package>
+    <package name="com.wolfogre.action.TeacherAction" extends="struts-default" namespace="/teacher">
+        <action name="index" class="com.wolfogre.action.TeacherAction" method="index">
+            <result>/WEB-INF/content/teacher/index.jsp</result>
+        </action>
+        <action name="timetable" class="com.wolfogre.action.TeacherAction" method="timetable">
+            <result>/WEB-INF/content/teacher/timetable.jsp</result>
+        </action>
+    </package>
 </struts>
