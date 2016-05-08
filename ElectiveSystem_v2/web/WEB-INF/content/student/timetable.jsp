@@ -74,8 +74,8 @@
 	</div>
 </div>
 <ul class="nav nav-tabs">
-	<li role="presentation" class="active"><a href="index.action">基本信息</a></li>
-	<li role="presentation"><a href="timetable.action">课表查询</a></li>
+	<li role="presentation"><a href="index.action">基本信息</a></li>
+	<li role="presentation" class="active"><a href="timetable.action">课表查询</a></li>
 	<li role="presentation"><a href="score.action">成绩查询</a></li>
 	<li role="presentation"><a href="course.action">选课退课</a></li>
 	<li role="presentation"><a href="${pageContext.request.contextPath}/login.action">退出登录</a></li>

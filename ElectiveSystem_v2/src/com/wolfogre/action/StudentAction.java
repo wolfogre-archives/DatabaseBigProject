@@ -42,12 +42,11 @@ public class StudentAction extends ActionSupport {
 
 	public String timetable()  throws Exception{
 		ActionContext actionContext = ActionContext.getContext();
-		Student student = (Student)session.get(Student.class, "master");
+		Student student = (Student)actionContext.getSession().get( "master");
 		List<SelectCourse> selectCourseList = session
 				.createSQLQuery("SELECT * FROM SO WHERE s_id = '" + student.getS_id() + "' and o_id in (SELECT o_id FROM O WHERE d_term = '" + Information.getTerm().getD_term() +"')")
 				.addEntity(SelectCourse.class).list();
 		actionContext.put("selectCourseList",selectCourseList);
-		//TODO;这里有空引用异常
 		return SUCCESS;
 	}
 }

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="hibernate.cfg.xml/Hibernate" uuid="389f28ab-67d4-447d-ac2e-80c70222efaa">
+    <database-info product="MySQL" version="5.5.5-10.1.13-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="elective_system_v1"/>
+      <table id="2" parent="1" name="c">
+        <comment>课程</comment>
+      </table>
+      <table id="3" parent="1" name="d">
+        <comment>日程</comment>
+      </table>
+      <table id="4" parent="1" name="m">
+        <comment>管理员</comment>
+      </table>
+      <table id="5" parent="1" name="o">
+        <comment>开课</comment>
+      </table>
+      <table id="6" parent="1" name="s">
+        <comment>学生</comment>
+      </table>
+      <table id="7" parent="1" name="so">
+        <comment>选课</comment>
+      </table>
+      <table id="8" parent="1" name="t">
+        <comment>教师</comment>
+      </table>
+      <column id="9" parent="2" name="c_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="10" parent="2" name="c_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="11" parent="2" name="c_credit">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="12" parent="2" name="PRIMARY">
+        <columns>c_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="13" parent="3" name="d_term">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="14" parent="3" name="d_begin">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="15" parent="3" name="d_end">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="16" parent="3" name="d_sel_begin">
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="17" parent="3" name="d_sel_end">
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="18" parent="3" name="d_reg_begin">
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="19" parent="3" name="d_reg_end">
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="20" parent="3" name="d_inq_begin">
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="21" parent="3" name="d_inq_end">
+        <data-type>timestamp</data-type>
+      </column>
+      <key id="22" parent="3" name="PRIMARY">
+        <columns>d_term</columns>
+        <primary>1</primary>
+      </key>
+      <column id="23" parent="4" name="m_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="24" parent="4" name="m_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="25" parent="4" name="m_pwd">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="26" parent="4" name="PRIMARY">
+        <columns>m_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="27" parent="5" name="o_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="28" parent="5" name="c_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="29" parent="5" name="t_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="30" parent="5" name="d_term">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="31" parent="5" name="o_room">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="32" parent="5" name="o_time">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="33" parent="5" name="o_cap">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="34" parent="5" name="c_id">
+        <columns>c_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="35" parent="5" name="d_term">
+        <columns>d_term</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="36" parent="5" name="t_id">
+        <columns>t_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="37" parent="5" name="PRIMARY">
+        <columns>o_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="38" parent="5" name="c_id">
+        <columns>c_id</columns>
+        <ref-key>~.c.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="39" parent="5" name="d_term">
+        <columns>d_term</columns>
+        <ref-key>~.d.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="40" parent="5" name="t_id">
+        <columns>t_id</columns>
+        <ref-key>~.t.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="41" parent="6" name="s_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="42" parent="6" name="s_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="43" parent="6" name="s_pwd">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="44" parent="6" name="PRIMARY">
+        <columns>s_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="45" parent="7" name="s_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="46" parent="7" name="o_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <index id="47" parent="7" name="o_id">
+        <columns>o_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="48" parent="7" name="PRIMARY">
+        <columns>s_id
+o_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="49" parent="7" name="o_id">
+        <columns>o_id</columns>
+        <ref-key>~.o.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="50" parent="7" name="s_id">
+        <columns>s_id</columns>
+        <ref-key>~.s.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="51" parent="8" name="t_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="52" parent="8" name="t_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="53" parent="8" name="t_pwd">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="54" parent="8" name="PRIMARY">
+        <columns>t_id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
