@@ -107,5 +107,11 @@
         <action name="timetable" class="com.wolfogre.action.TeacherAction" method="timetable">
             <result>/WEB-INF/content/teacher/timetable.jsp</result>
         </action>
+        <action name="list" class="com.wolfogre.action.TeacherAction" method="list">
+            <result>/WEB-INF/content/teacher/list.jsp</result>
+        </action>
+        <action name="score" class="com.wolfogre.action.TeacherAction" method="score">
+            <result>/WEB-INF/content/teacher/score.jsp</result>
+        </action>
     </package>
 </struts>

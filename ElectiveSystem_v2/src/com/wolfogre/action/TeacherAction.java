@@ -51,6 +51,7 @@ public class TeacherAction extends ActionSupport {
 		for(OpenCourse openCourse : openCourseList){
 			HashMap<String, Object> temp = new HashMap<>();
 			Course course = (Course)session.get(Course.class, openCourse.getC_id());
+			temp.put("开课号", openCourse.getO_id());
 			temp.put("课程号", course.getC_id());
 			temp.put("课程名", course.getC_name());
 			temp.put("学分", course.getC_credit());
@@ -60,5 +61,26 @@ public class TeacherAction extends ActionSupport {
 		}
 		actionContext.put("selectData",selectData);
 		return SUCCESS;
+	}
+
+	public String list() throws Exception{
+		ActionContext actionContext = ActionContext.getContext();
+		String[] arr = (String[])actionContext.getParameters().get("o_id");
+		if(arr == null || arr.length == 0)
+			return SUCCESS;
+		Integer o_id = Integer.parseInt(arr[0]);
+		//TODO:这里应该再次验证参数，确认老师开了这门课
+		List<Student> studentList = session.createSQLQuery("SELECT * FROM S WHERE S.s_id in (SELECT SO.s_id FROM SO WHERE SO.o_id =" + o_id + ")").addEntity(Student.class).list();
+		actionContext.put("studentList", studentList);
+
+		OpenCourse openCourse = (OpenCourse)session.get(OpenCourse.class, o_id);
+		Course course = (Course)session.get(Course.class, openCourse.getC_id());
+		actionContext.put("course", course);
+
+		return SUCCESS;
+	}
+
+	public String score() throws Exception{
+		return list();
 	}
 }

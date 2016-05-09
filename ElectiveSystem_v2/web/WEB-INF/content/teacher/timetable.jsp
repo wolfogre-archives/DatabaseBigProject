@@ -122,6 +122,8 @@
 		<th>学分</th>
 		<th>上课时间</th>
 		<th>上课地点</th>
+		<th></th>
+		<th></th>
 	</tr>
 	</thead>
 
@@ -140,6 +142,8 @@
 		<td><%=selectData.get(index).get("学分")%></td>
 		<td><%=Information.getCourseTimeString(index, selectData.get(index).get("上课时间").toString())%></td>
 		<td><%=selectData.get(index).get("上课地点")%></td>
+		<td><a href="list.action?o_id=<%=selectData.get(index).get("开课号")%>">学生名单</a></td>
+		<td><a href="score.action?o_id=<%=selectData.get(index).get("开课号")%>">成绩登记</a></td>
 	</tr>
 	<%
 		}
