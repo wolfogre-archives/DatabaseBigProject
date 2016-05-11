@@ -3,7 +3,8 @@
 <%@ page import="com.wolfogre.Information" %>
 <%@ page import="com.wolfogre.domain.Student" %>
 <%@ page import="com.wolfogre.domain.Course" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.HashMap" %><%--
   Created by IntelliJ IDEA.
   User: Jason Song(wolfogre.com)
   Date: 2016/4/13
@@ -100,9 +101,9 @@
 	}
 %>
 <%
-	List<Student> studentList = (List<Student>)request.getAttribute("studentList");
+	HashMap<Integer, HashMap<String, Object>> scoreData = (HashMap<Integer, HashMap<String, Object>>)request.getAttribute("scoreData");
 	Course course = (Course)request.getAttribute("course");
-	if(studentList == null){
+	if(scoreData == null){
 %>
 <div class="jumbotron" style="height: 100%">
 	<div class="panel panel-info center-block" style="width: 50%">
@@ -117,9 +118,9 @@
 %>
 <div class="text-center">
 	<h2>课程号：<%=course.getC_id()%>&nbsp;&nbsp;&nbsp;&nbsp;课程名：<%=course.getC_name()%></h2>
-
 </div>
-<form action="update-student" method="get">
+<form action="update-score" method="post">
+	<input type="text" name="o_id" class="hidden" value="<%=(Integer)request.getAttribute("o_id")%>"/>
 	<table id="dataTable" class="display" cellspacing="0" width="100%">
 		<thead>
 		<tr>
@@ -131,21 +132,23 @@
 		</thead>
 		<tbody>
 		<%
-			for(Student student : studentList)
+			for(int index = 0; scoreData.get(index) != null; ++index )
 			{
 		%>
 		<tr>
-			<td><%=student.getS_id()%></td>
-			<td><%=student.getS_name()%></td>
-			<td><input type="text" name="s_id" class="form-control" placeholder="未登记" value="12"></td>
-			<td><input type="text" name="s_id" class="form-control" placeholder="未登记"></td>
-			<!--TODO:接着这儿写-->
+			<td><%=scoreData.get(index).get("学号")%></td>
+			<td><%=scoreData.get(index).get("姓名")%></td>
+			<td><input type="text" name="pscj_<%=scoreData.get(index).get("学号")%>" class="form-control" placeholder="未登记" value="<%=(scoreData.get(index).get("平时成绩") == null)?"":scoreData.get(index).get("平时成绩")%>"></td>
+			<td><input type="text" name="kscj_<%=scoreData.get(index).get("学号")%>" class="form-control" placeholder="未登记" value="<%=(scoreData.get(index).get("考试成绩") == null)?"":scoreData.get(index).get("考试成绩")%>"></td>
 		</tr>
 		<%
 			}
 		%>
 		</tbody>
 	</table>
+	<div class="text-center">
+		<button type="submit" class="btn btn-success">&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp;&nbsp;&nbsp;&nbsp;交&nbsp;&nbsp;&nbsp;&nbsp;</button>
+	</div>
 </form>
 
 </body>

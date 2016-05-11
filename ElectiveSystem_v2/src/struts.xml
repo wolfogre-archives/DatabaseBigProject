@@ -113,5 +113,8 @@
         <action name="score" class="com.wolfogre.action.TeacherAction" method="score">
             <result>/WEB-INF/content/teacher/score.jsp</result>
         </action>
+        <action name="update-score" class="com.wolfogre.action.TeacherAction" method="updateScore">
+            <result type="chain">score</result>
+        </action>
     </package>
 </struts>
