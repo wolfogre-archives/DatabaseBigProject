@@ -42,16 +42,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/teacher/list.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="123" column="8" selection-start-line="95" selection-start-column="0" selection-end-line="123" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="timetable.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/timetable.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,12 +117,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="score.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="score.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/score.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51891893">
+            <state vertical-scroll-proportion="-10.285714">
               <caret line="72" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Information.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.42439863">
+              <caret line="56" column="38" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="38" />
+              <folding>
+                <marker date="1462712762037" expanded="true" signature="967:1024" placeholder="select * fro... D" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -233,7 +235,6 @@
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/domain/SelectCourse.java" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/score.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/timetable.jsp" />
-        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/course.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/StudentAction.java" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/teacher/index.jsp" />
@@ -243,6 +244,7 @@
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/struts.xml" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/teacher/score.jsp" />
         <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/action/TeacherAction.java" />
+        <option value="$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java" />
       </list>
     </option>
   </component>
@@ -1111,16 +1113,16 @@
       <workItem from="1462965792317" duration="609000" />
       <workItem from="1462973916919" duration="807000" />
       <workItem from="1463301164840" duration="1091000" />
-      <workItem from="1463531929363" duration="12000" />
+      <workItem from="1463531929363" duration="500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78155000" />
+    <option name="totallyTimeSpent" value="78643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1133,7 +1135,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.80784315" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.80784315" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24925596" sideWeight="0.51578945" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1488,13 +1490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="130" column="32" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/manager/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.285714">
@@ -1662,9 +1657,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/web/WEB-INF/content/student/score.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51891893">
+        <state vertical-scroll-proportion="-10.285714">
           <caret line="72" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElectiveSystem_v2/src/com/wolfogre/Information.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42439863">
+          <caret line="56" column="38" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="38" />
+          <folding>
+            <marker date="1462712762037" expanded="true" signature="967:1024" placeholder="select * fro... D" />
+          </folding>
         </state>
       </provider>
     </entry>
